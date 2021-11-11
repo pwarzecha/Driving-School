@@ -1,2 +1,2 @@
 # Driving-School
-Application for learning for the driving license test 
+Application for practice the driving license test 
