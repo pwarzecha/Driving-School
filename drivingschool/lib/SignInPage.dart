@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './LoggedHomePage.dart';
-import 'package:adobe_xd/page_link.dart';
-import './MainHomePage.dart';
 import './SignUpPage.dart';
+import 'package:adobe_xd/page_link.dart';
+import './LoggedHomePage.dart';
+import './MainHomePage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SignInPage extends StatefulWidget {
+class SignInPage extends StatelessWidget {
   final String text6;
   SignInPage({
     Key? key,
     this.text6 =
-    'Created by M. Gocal & P. Warzecha',
+        'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);
-
-  @override
-  State<SignInPage> createState() => _SignInPageState();
-}
-
-class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,42 +69,6 @@ class _SignInPageState extends State<SignInPage> {
             Pin(size: 85.8, middle: 0.2728),
             child: SvgPicture.string(
               _svg_v3wv5,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -1.0, end: -2.7),
-            Pin(size: 84.7, middle: 0.3152),
-            child: SvgPicture.string(
-              _svg_ing1nz,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -0.8, end: -0.4),
-            Pin(size: 89.9, middle: 0.3804),
-            child: SvgPicture.string(
-              _svg_qi400s,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -0.8, end: -0.4),
-            Pin(size: 92.0, middle: 0.3487),
-            child: SvgPicture.string(
-              _svg_wz07gi,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: -0.8, end: -0.4),
-            Pin(size: 89.9, middle: 0.4152),
-            child: SvgPicture.string(
-              _svg_ksn09k,
               allowDrawingOutsideViewBox: true,
               fit: BoxFit.fill,
             ),
@@ -188,6 +146,73 @@ class _SignInPageState extends State<SignInPage> {
           //   ),
           // ),
           Pinned.fromPins(
+            Pin(start: 17.0, end: 30.0),
+            Pin(size: 50.0, middle: 0.1851),
+            child: Text(
+              'E-DRIVE SCHOOL',
+              style: TextStyle(
+                fontFamily: 'Quicksand',
+                fontSize: 40,
+                color: const Color(0xffffffff),
+                fontWeight: FontWeight.w700,
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 287.0, end: -77.0),
+            Pin(size: 15.0, end: 10.0),
+            child: Text(
+              text6,
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 10,
+                color: const Color(0xffa5a3a3),
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 214.0, end: 8.0),
+            Pin(size: 20.0, middle: 0.3777),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => SignUpPage(
+                    text6:
+                        'Created by M. Gocal & P. Warzecha                                          ',
+                  ),
+                ),
+              ],
+              child: Text.rich(
+                TextSpan(
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                    color: const Color(0xffffffff),
+                  ),
+                  children: [
+                    TextSpan(
+                      text: 'Nie masz konta?',
+                    ),
+                    TextSpan(
+                      text: ' Zarejestruj sie',
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ],
+                ),
+                textHeightBehavior:
+                    TextHeightBehavior(applyHeightToFirstAscent: false),
+                textAlign: TextAlign.left,
+              ),
+            ),
+          ),
+          Pinned.fromPins(
             Pin(start: 0.0, end: 0.0),
             Pin(size: 476.0, end: -74.0),
             child: Stack(
@@ -218,8 +243,6 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                 ),
-
-
                 Pinned.fromPins(
                   Pin(start: 37.0, end: 38.0),
                   Pin(size: 52.0, middle: 0.5849),
@@ -231,67 +254,66 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                 ),
-
                 Pinned.fromPins(
-                  Pin(start: 37.0, end: 38.0),
-                  Pin(size: 52.0, middle: 0.7453),
-                  child: ElevatedButton(
-                    style:ButtonStyle(
-                        backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-                            )
-                        )
-                    ),
-
-                    onPressed: () {
-                      pageBuilder: () => LoggedHomePage(
-                        text6:
-                        'TEST',
-                      );
-                    },
-                    child: Container(
-                      child: Text(
-                        'Logowanie',
-                        style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                          color: const Color(0xffffffff),
-                          fontWeight: FontWeight.w500,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-
-                      // links: [
-                      //   PageLinkInfo(
-                      //     transition: LinkTransition.Fade,
-                      //     ease: Curves.easeOut,
-                      //     duration: 0.3,
-                      //     // pageBuilder: () => LoggedHomePage(
-                      //     //   text6:
-                      //     //       'TEST',
-                      //     // ),
-                      //   ),
-                      // ],
-                      // child: Container(
-                      //   decoration: BoxDecoration(
-                      //     borderRadius: BorderRadius.circular(10.0),
-                      //     color: const Color(0xff252427),
-                      //     border: Border.all(
-                      //         width: 1.0, color: const Color(0xff606060)),
-                      //   ),
-                      // ),
-                    ),
-                  ),
+                Pin(start: 37.0, end: 38.0),
+                Pin(size: 52.0, middle: 0.7453),
+                child: ElevatedButton(
+                style:ButtonStyle(
+                backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                )
+                )
                 ),
 
-
+                onPressed: () {
+                pageBuilder: () => LoggedHomePage(
+                text6:
+                'TEST',
+                );
+                },
+                child: Container(
+                child: Text(
+                'Logowanie',
+                style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 18,
+                color: const Color(0xffffffff),
+                fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.left,
+                ),
+                //     links: [
+                //       PageLinkInfo(
+                //         transition: LinkTransition.Fade,
+                //         ease: Curves.easeOut,
+                //         duration: 0.3,
+                //         pageBuilder: () => MainHomePage(
+                //           text5: 'Logowanie            \n',
+                //           text4: 'Egzamin         \n',
+                //           text3: 'Nauka    \n',
+                //           text6:
+                //               'Created by M. Gocal & P. Warzecha                                          ',
+                //           text2:
+                //               'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
+                //         ),
+                //       ),
+                //     ],
+                //     child: SvgPicture.string(
+                //       _svg_gqisop,
+                //       allowDrawingOutsideViewBox: true,
+                //       fit: BoxFit.fill,
+                //     ),
+                //   ),
+                // ),
+                ),
+                ),
+                ),
                 Pinned.fromPins(
                   Pin(start: 21.0, end: 22.0),
                   Pin(size: 51.0, middle: 0.2),
-                  child:
-                  Text(
+                  child: Text(
                     'Witaj z powrotem!',
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -301,7 +323,6 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     textAlign: TextAlign.left,
                   ),
-
                 ),
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
@@ -339,8 +360,6 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ),
 
-
-
                 // Pinned.fromPins(
                 //   Pin(size: 159.0, middle: 0.6389),
                 //   Pin(size: 25.0, middle: 0.7317),
@@ -366,73 +385,6 @@ class _SignInPageState extends State<SignInPage> {
             ),
           ),
 
-
-          Pinned.fromPins(
-            Pin(start: 37.0, end: 30.0),
-            Pin(size: 50.0, middle: 0.1851),
-            child: Text(
-              'E-DRIVE SCHOOL',
-              style: TextStyle(
-                fontFamily: 'Quicksand',
-                fontSize: 40,
-                color: const Color(0xffffffff),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 287.0, end: -77.0),
-            Pin(size: 15.0, end: 10.0),
-            child: Text(
-              widget.text6,
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                fontSize: 10,
-                color: const Color(0xffa5a3a3),
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-
-          Pinned.fromPins(
-            Pin(size: 214.0, end: 0),
-            Pin(size: 20.0, middle: 0.4257),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => SignUpPage(
-                    text6:
-                    'Created by M. Gocal & P. Warzecha                                          ',
-                  ),
-                ),
-              ],
-              child: Text.rich(
-                TextSpan(
-                  style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 14,
-                    color: const Color(0xff252427),
-                  ),
-                  children: [
-                    TextSpan(
-                      text: 'Nie masz konta?',
-                    ),
-                    TextSpan(
-                      text: ' Zarejestruj sie',
-                    ),
-
-                  ],
-                ),
-                textHeightBehavior:
-                TextHeightBehavior(applyHeightToFirstAscent: false),
-                textAlign: TextAlign.left,
-              ),
-            ),
-          ),
         ],
       ),
     );
@@ -451,14 +403,6 @@ const String _svg_iqqex6 =
     '<svg viewBox="-4.5 36.2 380.6 63.6" ><path transform="translate(-449.47, -8.61)" d="M 444.9999694824219 103.3557357788086 C 444.9999694824219 103.3557357788086 481.9542541503906 59.55716323852539 513.1636352539062 60.17461013793945 C 544.373046875 60.79205703735352 567.235107421875 120.8342895507812 614.6734008789062 106.0691909790039 C 662.1116943359375 91.30408477783203 759.0516967773438 32.43415832519531 788.3886108398438 47.19926071166992 C 817.7254638671875 61.9643669128418 825.5504150390625 62.75393295288086 825.5504150390625 62.75393295288086" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
 const String _svg_v3wv5 =
     '<svg viewBox="-1.0 158.3 378.7 85.8" ><path transform="translate(-446.0, 81.14)" d="M 445 141.4989166259766 C 445 141.4989166259766 471.1600341796875 168.1650390625 488.385986328125 162.0129089355469 C 505.6119384765625 155.8607788085938 543.9839477539062 112.0508270263672 587.6640625 128.6616821289062 C 612.5178833007812 138.1131286621094 655.066162109375 153.2668762207031 685.06396484375 158.9104309082031 C 707.3419189453125 163.1018981933594 733.2923583984375 149.5220184326172 746.6641845703125 141.4989166259766 C 777.6890869140625 122.8839263916016 823.7114868164062 77.15784454345703 823.7114868164062 77.15784454345703" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
-const String _svg_ing1nz =
-    '<svg viewBox="-1.0 183.2 378.7 84.7" ><path transform="translate(-446.0, 106.07)" d="M 445 141.4989166259766 C 445 141.4989166259766 463.2551879882812 167.0269012451172 480.4811401367188 160.8747711181641 C 497.7070922851562 154.7226409912109 537.2611694335938 106.3087768554688 580.9412841796875 122.9195251464844 C 624.6213989257812 139.5302734375 709.3951416015625 165.0415191650391 740.4200439453125 146.4265899658203 C 771.4449462890625 127.8116607666016 823.7114868164062 77.15784454345703 823.7114868164062 77.15784454345703" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
-const String _svg_qi400s =
-    '<svg viewBox="-0.8 219.2 376.2 89.9" ><path transform="translate(-446.0, 147.3)" d="M 445.20751953125 147.8669281005859 C 445.20751953125 147.8669281005859 464.4358520507812 163.3265380859375 481.6618041992188 157.1744079589844 C 498.8877563476562 151.0222778320312 542.6907958984375 102.5581359863281 586.3709106445312 119.1688842773438 C 630.051025390625 135.7796325683594 712.7963256835938 185.8726654052734 751.189697265625 147.8669281005859 C 789.5830688476562 109.8611907958984 821.383544921875 71.855712890625 821.383544921875 71.855712890625" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
-const String _svg_wz07gi =
-    '<svg viewBox="-0.8 200.2 376.2 92.0" ><path transform="translate(-446.0, 128.3)" d="M 445.20751953125 147.8669281005859 C 445.20751953125 147.8669281005859 464.4358520507812 163.3265380859375 481.6618041992188 157.1744079589844 C 498.8877563476562 151.0222778320312 554.9275512695312 106.3089904785156 598.607666015625 122.9197387695312 C 642.2877807617188 139.5304870605469 709.327880859375 185.2440795898438 744.6666259765625 152.2000427246094 C 780.00537109375 119.156005859375 821.383544921875 71.855712890625 821.383544921875 71.855712890625" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
-const String _svg_ksn09k =
-    '<svg viewBox="-0.8 239.2 376.2 89.9" ><path transform="translate(-446.0, 167.3)" d="M 445.20751953125 147.8669281005859 C 445.20751953125 147.8669281005859 464.4358520507812 163.3265380859375 481.6618041992188 157.1744079589844 C 498.8877563476562 151.0222778320312 542.6907958984375 102.5581359863281 586.3709106445312 119.1688842773438 C 630.051025390625 135.7796325683594 712.7963256835938 185.8726654052734 751.189697265625 147.8669281005859 C 789.5830688476562 109.8611907958984 821.383544921875 71.855712890625 821.383544921875 71.855712890625" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
 const String _svg_t4uped =
     '<svg viewBox="169.8 309.1 30.3 10.3" ><path transform="translate(-363.0, 102.3)" d="M 563.1538696289062 215.2086029052734 C 563.1538696289062 215.2086029052734 548.0075073242188 205.8908233642578 542.587890625 206.8130645751953 C 537.1682739257812 207.7353057861328 532.9542236328125 210.3650207519531 532.9542236328125 210.3650207519531 C 532.9542236328125 210.3650207519531 532.095703125 214.4852752685547 534.48681640625 215.2086029052734 C 537.7314453125 216.1904907226562 548.008544921875 217.1480407714844 551.8118896484375 217.0017700195312 C 558.0579223632812 217.0017700195312 563.1538696289062 215.2086029052734 563.1538696289062 215.2086029052734 Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" /></svg>';
 const String _svg_nlyi4f =
@@ -473,7 +417,7 @@ const String _svg_l3belb =
     '<svg viewBox="312.6 263.8 63.9 59.3" ><path transform="translate(-458.42, 78.85)" d="M 771.029541015625 244.2387084960938 C 771.029541015625 244.2387084960938 792.8095703125 230.5699615478516 804.7584838867188 219.9788970947266 C 816.7073974609375 209.3878326416016 834.90234375 184.9468841552734 834.90234375 184.9468841552734" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
 const String _svg_f05ka =
     '<svg viewBox="316.6 279.8 63.9 59.3" ><path transform="translate(-454.42, 94.85)" d="M 771.029541015625 244.2387084960938 C 771.029541015625 244.2387084960938 792.8095703125 230.5699615478516 804.7584838867188 219.9788970947266 C 816.7073974609375 209.3878326416016 834.90234375 184.9468841552734 834.90234375 184.9468841552734" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
-const String _svg_gqisop =
-    '<svg viewBox="36.0 311.0 13.5 23.6" ><path transform="translate(24.75, 304.81)" d="M 15.32109355926514 18 L 24.2578125 9.0703125 C 24.91875076293945 8.409375190734863 24.91875076293945 7.340624809265137 24.2578125 6.686718940734863 C 23.59687423706055 6.025781631469727 22.52812576293945 6.032812595367432 21.8671875 6.686718940734863 L 11.7421875 16.8046875 C 11.10234355926514 17.44453048706055 11.08828163146973 18.47109413146973 11.69296836853027 19.13203048706055 L 21.86015701293945 29.3203125 C 22.19062614440918 29.65078163146973 22.62656402587891 29.8125 23.05546951293945 29.8125 C 23.484375 29.8125 23.92031288146973 29.65078163146973 24.25078201293945 29.3203125 C 24.91172027587891 28.65937423706055 24.91172027587891 27.59062576293945 24.25078201293945 26.93671798706055 L 15.32109355926514 18 Z" fill="#252427" stroke="#000000" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_un50wv =
     '<svg viewBox="334.6 284.8 63.9 59.3" ><path transform="translate(-436.42, 99.85)" d="M 771.029541015625 244.2387084960938 C 771.029541015625 244.2387084960938 792.8095703125 230.5699615478516 804.7584838867188 219.9788970947266 C 816.7073974609375 209.3878326416016 834.90234375 184.9468841552734 834.90234375 184.9468841552734" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
+const String _svg_gqisop =
+    '<svg viewBox="36.0 311.0 13.5 23.6" ><path transform="translate(24.75, 304.81)" d="M 15.32109355926514 18 L 24.2578125 9.0703125 C 24.91875076293945 8.409375190734863 24.91875076293945 7.340624809265137 24.2578125 6.686718940734863 C 23.59687423706055 6.025781631469727 22.52812576293945 6.032812595367432 21.8671875 6.686718940734863 L 11.7421875 16.8046875 C 11.10234355926514 17.44453048706055 11.08828163146973 18.47109413146973 11.69296836853027 19.13203048706055 L 21.86015701293945 29.3203125 C 22.19062614440918 29.65078163146973 22.62656402587891 29.8125 23.05546951293945 29.8125 C 23.484375 29.8125 23.92031288146973 29.65078163146973 24.25078201293945 29.3203125 C 24.91172027587891 28.65937423706055 24.91172027587891 27.59062576293945 24.25078201293945 26.93671798706055 L 15.32109355926514 18 Z" fill="#252427" stroke="#000000" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
