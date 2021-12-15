@@ -6,13 +6,19 @@ import './MainHomePage.dart';
 import './SignUpPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   final String text6;
   SignInPage({
     Key? key,
     this.text6 =
-        'Created by M. Gocal & P. Warzecha                                          ',
+        'Created by M. Gocal & P. Warzecha',
   }) : super(key: key);
+
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -280,7 +286,8 @@ class SignInPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(start: 21.0, end: 22.0),
                   Pin(size: 51.0, middle: 0.2),
-                  child: Text(
+                  child:
+                  Text(
                     'Witaj z powrotem!',
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -290,12 +297,15 @@ class SignInPage extends StatelessWidget {
                     ),
                     textAlign: TextAlign.left,
                   ),
+
                 ),
                 Pinned.fromPins(
-                  Pin(size: 38.0, start: 53.0),
+                  Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.4035),
-                  child: Text(
-                    'Email',
+                  child: TextField(
+                    decoration: InputDecoration (
+                        labelText: 'E-mail ',
+                    ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
@@ -304,43 +314,55 @@ class SignInPage extends StatelessWidget {
                     textAlign: TextAlign.left,
                   ),
                 ),
+
+
                 Pinned.fromPins(
-                  Pin(size: 39.0, start: 53.0),
+                  Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.5789),
-                  child: Text(
-                    'Haslo',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 14,
-                      color: const Color(0xffa5a3a3),
+                  child: TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Haslo',
+                        labelStyle: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 14,
+                        color: const Color(0xffa5a3a3),
+                      ),
+                      textAlign: TextAlign.left,
                     ),
-                    textAlign: TextAlign.left,
                   ),
-                ),
+
                 Pinned.fromPins(
                   Pin(size: 159.0, middle: 0.6389),
                   Pin(size: 25.0, middle: 0.7317),
-                  child: PageLink(
-                    links: [
-                      PageLinkInfo(
-                        transition: LinkTransition.Fade,
-                        ease: Curves.easeOut,
-                        duration: 0.3,
-                        pageBuilder: () => LoggedHomePage(
-                          text6:
-                              'Created by M. Gocal & P. Warzecha                                          ',
+                  child: ElevatedButton(
+
+                    onPressed: () {  },
+                    child: PageLink(
+                      links: [
+                        PageLinkInfo(
+                          transition: LinkTransition.Fade,
+                          ease: Curves.easeOut,
+                          duration: 0.3,
+                          pageBuilder: () => LoggedHomePage(
+                            text6:
+                                'Created by M. Gocal & P. Warzecha',
+                          ),
                         ),
+                      ],
+                      child: Text(
+                        'Logowanie',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 18,
+                          color: const Color(0xffffffff),
+                          fontWeight: FontWeight.w500,
+                        ),
+                        textAlign: TextAlign.left,
                       ),
-                    ],
-                    child: Text(
-                      'Logowanie             ',
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontSize: 18,
-                        color: const Color(0xffffffff),
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.left,
                     ),
                   ),
                 ),
@@ -348,7 +370,7 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(start: 17.0, end: 30.0),
+            Pin(start: 37.0, end: 30.0),
             Pin(size: 50.0, middle: 0.1851),
             child: Text(
               'E-DRIVE SCHOOL',
@@ -365,7 +387,7 @@ class SignInPage extends StatelessWidget {
             Pin(size: 287.0, end: -77.0),
             Pin(size: 15.0, end: 10.0),
             child: Text(
-              text6,
+              widget.text6,
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
@@ -397,15 +419,7 @@ class SignInPage extends StatelessWidget {
                     color: const Color(0xff252427),
                   ),
                   children: [
-                    TextSpan(
-                      text: 'Nie masz konta?',
-                    ),
-                    TextSpan(
-                      text: ' Zarejestruj sie',
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                      ),
-                    ),
+
                   ],
                 ),
                 textHeightBehavior:
