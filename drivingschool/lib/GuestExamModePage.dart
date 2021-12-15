@@ -4,13 +4,24 @@ import './GuestResultPage.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class GuestExamModePage extends StatelessWidget {
+class GuestExamModePage extends StatefulWidget {
   final String text6;
   GuestExamModePage({
     Key? key,
     this.text6 =
         'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);
+
+  @override
+  State<GuestExamModePage> createState() => _GuestExamModePageState();
+}
+
+class _GuestExamModePageState extends State<GuestExamModePage> {
+
+  bool clickA = false;
+  bool clickB = false;
+  bool clickC = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,97 +40,124 @@ class GuestExamModePage extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 31.0, end: 44.0),
             Pin(size: 63.0, end: 33.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 11.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xff252427),
+            child: ElevatedButton(
+              style:ButtonStyle(
+                  backgroundColor: (clickC == false) ? MaterialStateProperty.all<Color>(const Color(0xff252427)) : MaterialStateProperty.all<Color>(Colors.red),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      )
+                  )
+              ),
+              onPressed: (){
+                setState((){
+                  clickC = true;
+                });
+              },
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(start: 0.0, end: 11.0),
+                  ),
+                  Pinned.fromPins(
+                    Pin(size: 120.0, middle: 0.5),
+                    Pin(size: 52.0, end: 0.0),
+                    child: Text(
+                      'Odpowiedz C\n',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 18,
+                        color: const Color(0xffffffff),
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.left,
                     ),
                   ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 120.0, middle: 0.5),
-                  Pin(size: 52.0, end: 0.0),
-                  child: Text(
-                    'Odpowiedz C\n',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 18,
-                      color: const Color(0xffffffff),
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Pinned.fromPins(
             Pin(start: 31.0, end: 44.0),
             Pin(size: 62.0, middle: 0.8079),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 10.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xff252427),
+            child: ElevatedButton(
+              style:ButtonStyle(
+                  backgroundColor: (clickB == false) ? MaterialStateProperty.all<Color>(const Color(0xff252427)) : MaterialStateProperty.all<Color>(Colors.green),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      )
+                  )
+              ),
+              onPressed: (){
+                setState((){
+                  clickB = true;
+                });
+              },
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(start: 0.0, end: 10.0),
+                  ),
+                  Pinned.fromPins(
+                    Pin(size: 150.0, middle: 0.6133),
+                    Pin(size: 52.0, end: 0.0),
+                    child: Text(
+                      'Odpowiedz B       \n',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 18,
+                        color: const Color(0xffffffff),
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.left,
                     ),
                   ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 150.0, middle: 0.6133),
-                  Pin(size: 52.0, end: 0.0),
-                  child: Text(
-                    'Odpowiedz B       \n',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 18,
-                      color: const Color(0xffffffff),
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Pinned.fromPins(
             Pin(start: 31.0, end: 44.0),
             Pin(size: 67.0, middle: 0.6778),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 15.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xff252427),
+            child: ElevatedButton(
+              style:ButtonStyle(
+                  backgroundColor: (clickA == false) ? MaterialStateProperty.all<Color>(const Color(0xff252427)) : MaterialStateProperty.all<Color>(Colors.red),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      )
+                  )
+              ),
+              onPressed: (){
+                setState((){
+                  clickA = true;
+                });
+              },
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(start: 0.0, end: 15.0),
+                  ),
+                  Pinned.fromPins(
+                    Pin(size: 119.0, middle: 0.5028),
+                    Pin(size: 52.0, end: 0.0),
+                    child: Text(
+                      'Odpowiedz A\n',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 18,
+                        color: const Color(0xffffffff),
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.left,
                     ),
                   ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 119.0, middle: 0.5028),
-                  Pin(size: 52.0, end: 0.0),
-                  child: Text(
-                    'Odpowiedz A\n',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 18,
-                      color: const Color(0xffffffff),
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Pinned.fromPins(
@@ -203,7 +241,7 @@ class GuestExamModePage extends StatelessWidget {
             Pin(size: 287.0, end: -77.0),
             Pin(size: 15.0, end: 10.0),
             child: Text(
-              text6,
+              widget.text6,
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
