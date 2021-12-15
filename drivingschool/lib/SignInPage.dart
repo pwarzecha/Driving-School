@@ -11,7 +11,7 @@ class SignInPage extends StatefulWidget {
   SignInPage({
     Key? key,
     this.text6 =
-        'Created by M. Gocal & P. Warzecha',
+    'Created by M. Gocal & P. Warzecha',
   }) : super(key: key);
 
   @override
@@ -178,15 +178,15 @@ class _SignInPageState extends State<SignInPage> {
               fit: BoxFit.fill,
             ),
           ),
-          Pinned.fromPins(
-            Pin(size: 63.9, end: -23.5),
-            Pin(size: 59.3, middle: 0.4694),
-            child: SvgPicture.string(
-              _svg_un50wv,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            ),
-          ),
+          // Pinned.fromPins(
+          //   Pin(size: 63.9, end: -23.5),
+          //   Pin(size: 59.3, middle: 0.4694),
+          //   child: SvgPicture.string(
+          //     _svg_un50wv,
+          //     allowDrawingOutsideViewBox: true,
+          //     fit: BoxFit.fill,
+          //   ),
+          // ),
           Pinned.fromPins(
             Pin(start: 0.0, end: 0.0),
             Pin(size: 476.0, end: -74.0),
@@ -218,6 +218,8 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                 ),
+
+
                 Pinned.fromPins(
                   Pin(start: 37.0, end: 38.0),
                   Pin(size: 52.0, middle: 0.5849),
@@ -229,60 +231,62 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                 ),
+
                 Pinned.fromPins(
                   Pin(start: 37.0, end: 38.0),
                   Pin(size: 52.0, middle: 0.7453),
-                  child: PageLink(
-                    links: [
-                      PageLinkInfo(
-                        transition: LinkTransition.Fade,
-                        ease: Curves.easeOut,
-                        duration: 0.3,
-                        pageBuilder: () => LoggedHomePage(
-                          text6:
-                              'Created by M. Gocal & P. Warzecha                                          ',
-                        ),
-                      ),
-                    ],
+                  child: ElevatedButton(
+                    style:ButtonStyle(
+                        backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                            )
+                        )
+                    ),
+
+                    onPressed: () {
+                      pageBuilder: () => LoggedHomePage(
+                        text6:
+                        'TEST',
+                      );
+                    },
                     child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: const Color(0xff252427),
-                        border: Border.all(
-                            width: 1.0, color: const Color(0xff606060)),
-                      ),
-                    ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 13.5, start: 36.0),
-                  Pin(size: 23.6, start: 40.0),
-                  child:
-                      // Adobe XD layer: 'Icon ionic-ios-arro…' (shape)
-                      PageLink(
-                    links: [
-                      PageLinkInfo(
-                        transition: LinkTransition.Fade,
-                        ease: Curves.easeOut,
-                        duration: 0.3,
-                        pageBuilder: () => MainHomePage(
-                          text5: 'Logowanie            \n',
-                          text4: 'Egzamin         \n',
-                          text3: 'Nauka    \n',
-                          text6:
-                              'Created by M. Gocal & P. Warzecha                                          ',
-                          text2:
-                              'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
+                      child: Text(
+                        'Logowanie',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 18,
+                          color: const Color(0xffffffff),
+                          fontWeight: FontWeight.w500,
                         ),
+                        textAlign: TextAlign.left,
                       ),
-                    ],
-                    child: SvgPicture.string(
-                      _svg_gqisop,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
+
+                      // links: [
+                      //   PageLinkInfo(
+                      //     transition: LinkTransition.Fade,
+                      //     ease: Curves.easeOut,
+                      //     duration: 0.3,
+                      //     // pageBuilder: () => LoggedHomePage(
+                      //     //   text6:
+                      //     //       'TEST',
+                      //     // ),
+                      //   ),
+                      // ],
+                      // child: Container(
+                      //   decoration: BoxDecoration(
+                      //     borderRadius: BorderRadius.circular(10.0),
+                      //     color: const Color(0xff252427),
+                      //     border: Border.all(
+                      //         width: 1.0, color: const Color(0xff606060)),
+                      //   ),
+                      // ),
                     ),
                   ),
                 ),
+
+
                 Pinned.fromPins(
                   Pin(start: 21.0, end: 22.0),
                   Pin(size: 51.0, middle: 0.2),
@@ -304,7 +308,7 @@ class _SignInPageState extends State<SignInPage> {
                   Pin(size: 20.0, middle: 0.4035),
                   child: TextField(
                     decoration: InputDecoration (
-                        labelText: 'E-mail ',
+                      labelText: 'E-mail ',
                     ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -320,55 +324,49 @@ class _SignInPageState extends State<SignInPage> {
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.5789),
                   child: TextField(
-                      decoration: InputDecoration(
-                        labelText: 'Haslo',
-                        labelStyle: TextStyle(
-                          fontSize: 15,
-                        ),
-                      ),
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontSize: 14,
-                        color: const Color(0xffa5a3a3),
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-
-                Pinned.fromPins(
-                  Pin(size: 159.0, middle: 0.6389),
-                  Pin(size: 25.0, middle: 0.7317),
-                  child: ElevatedButton(
-
-                    onPressed: () {  },
-                    child: PageLink(
-                      links: [
-                        PageLinkInfo(
-                          transition: LinkTransition.Fade,
-                          ease: Curves.easeOut,
-                          duration: 0.3,
-                          pageBuilder: () => LoggedHomePage(
-                            text6:
-                                'Created by M. Gocal & P. Warzecha',
-                          ),
-                        ),
-                      ],
-                      child: Text(
-                        'Logowanie',
-                        style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                          color: const Color(0xffffffff),
-                          fontWeight: FontWeight.w500,
-                        ),
-                        textAlign: TextAlign.left,
+                    decoration: InputDecoration(
+                      labelText: 'Haslo',
+                      labelStyle: TextStyle(
+                        fontSize: 15,
                       ),
                     ),
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 14,
+                      color: const Color(0xffa5a3a3),
+                    ),
+                    textAlign: TextAlign.left,
                   ),
                 ),
+
+
+
+                // Pinned.fromPins(
+                //   Pin(size: 159.0, middle: 0.6389),
+                //   Pin(size: 25.0, middle: 0.7317),
+                //
+                //     child: widget(
+                //       child: PageLink(
+                //         child: Text(
+                //           'Logowanie',
+                //           style: TextStyle(
+                //             fontFamily: 'Poppins',
+                //             fontSize: 18,
+                //             color: const Color(0xffffffff),
+                //             fontWeight: FontWeight.w500,
+                //           ),
+                //           textAlign: TextAlign.left,
+                //         )
+                //       ),
+                //       ),
+                //     ),
+                //
+                // ),
               ],
             ),
           ),
+
+
           Pinned.fromPins(
             Pin(start: 37.0, end: 30.0),
             Pin(size: 50.0, middle: 0.1851),
@@ -396,8 +394,9 @@ class _SignInPageState extends State<SignInPage> {
               textAlign: TextAlign.left,
             ),
           ),
+
           Pinned.fromPins(
-            Pin(size: 214.0, end: 17.0),
+            Pin(size: 214.0, end: 0),
             Pin(size: 20.0, middle: 0.4257),
             child: PageLink(
               links: [
@@ -407,7 +406,7 @@ class _SignInPageState extends State<SignInPage> {
                   duration: 0.3,
                   pageBuilder: () => SignUpPage(
                     text6:
-                        'Created by M. Gocal & P. Warzecha                                          ',
+                    'Created by M. Gocal & P. Warzecha                                          ',
                   ),
                 ),
               ],
@@ -419,11 +418,17 @@ class _SignInPageState extends State<SignInPage> {
                     color: const Color(0xff252427),
                   ),
                   children: [
+                    TextSpan(
+                      text: 'Nie masz konta?',
+                    ),
+                    TextSpan(
+                      text: ' Zarejestruj sie',
+                    ),
 
                   ],
                 ),
                 textHeightBehavior:
-                    TextHeightBehavior(applyHeightToFirstAscent: false),
+                TextHeightBehavior(applyHeightToFirstAscent: false),
                 textAlign: TextAlign.left,
               ),
             ),
