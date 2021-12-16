@@ -172,6 +172,7 @@ class SignInPage extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
           ),
+
           Pinned.fromPins(
             Pin(size: 214.0, end: 8.0),
             Pin(size: 20.0, middle: 0.3777),
@@ -212,6 +213,7 @@ class SignInPage extends StatelessWidget {
               ),
             ),
           ),
+
           Pinned.fromPins(
             Pin(start: 0.0, end: 0.0),
             Pin(size: 476.0, end: -74.0),
@@ -309,6 +311,35 @@ class SignInPage extends StatelessWidget {
                 // ),
                 ),
                 ),
+                ),
+                Pinned.fromPins(
+                  Pin(size: 13.5, start: 37.0),
+                  Pin(size: 23.6, start: 25.0),
+                  child:
+                  // Adobe XD layer: 'Icon ionic-ios-arro…' (shape)
+                  PageLink(
+                    links: [
+                      PageLinkInfo(
+                        transition: LinkTransition.Fade,
+                        ease: Curves.easeOut,
+                        duration: 0.3,
+                        pageBuilder: () => MainHomePage(
+                          text5: 'Logowanie            \n',
+                          text4: 'Egzamin         \n',
+                          text3: 'Nauka    \n',
+                          text6:
+                          'Created by M. Gocal & P. Warzecha                                          ',
+                          text2:
+                          'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
+                        ),
+                      ),
+                    ],
+                    child: SvgPicture.string(
+                      _svg_f7fq5,
+                      allowDrawingOutsideViewBox: true,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
                 ),
                 Pinned.fromPins(
                   Pin(start: 21.0, end: 22.0),
@@ -421,3 +452,5 @@ const String _svg_un50wv =
     '<svg viewBox="334.6 284.8 63.9 59.3" ><path transform="translate(-436.42, 99.85)" d="M 771.029541015625 244.2387084960938 C 771.029541015625 244.2387084960938 792.8095703125 230.5699615478516 804.7584838867188 219.9788970947266 C 816.7073974609375 209.3878326416016 834.90234375 184.9468841552734 834.90234375 184.9468841552734" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
 const String _svg_gqisop =
     '<svg viewBox="36.0 311.0 13.5 23.6" ><path transform="translate(24.75, 304.81)" d="M 15.32109355926514 18 L 24.2578125 9.0703125 C 24.91875076293945 8.409375190734863 24.91875076293945 7.340624809265137 24.2578125 6.686718940734863 C 23.59687423706055 6.025781631469727 22.52812576293945 6.032812595367432 21.8671875 6.686718940734863 L 11.7421875 16.8046875 C 11.10234355926514 17.44453048706055 11.08828163146973 18.47109413146973 11.69296836853027 19.13203048706055 L 21.86015701293945 29.3203125 C 22.19062614440918 29.65078163146973 22.62656402587891 29.8125 23.05546951293945 29.8125 C 23.484375 29.8125 23.92031288146973 29.65078163146973 24.25078201293945 29.3203125 C 24.91172027587891 28.65937423706055 24.91172027587891 27.59062576293945 24.25078201293945 26.93671798706055 L 15.32109355926514 18 Z" fill="#252427" stroke="#000000" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
+const String _svg_f7fq5 =
+    '<svg viewBox="37.0 279.0 13.5 23.6" ><path transform="translate(25.75, 272.81)" d="M 15.32109355926514 18 L 24.2578125 9.0703125 C 24.91875076293945 8.409375190734863 24.91875076293945 7.340624809265137 24.2578125 6.686718940734863 C 23.59687423706055 6.025781631469727 22.52812576293945 6.032812595367432 21.8671875 6.686718940734863 L 11.7421875 16.8046875 C 11.10234355926514 17.44453048706055 11.08828163146973 18.47109413146973 11.69296836853027 19.13203048706055 L 21.86015701293945 29.3203125 C 22.19062614440918 29.65078163146973 22.62656402587891 29.8125 23.05546951293945 29.8125 C 23.484375 29.8125 23.92031288146973 29.65078163146973 24.25078201293945 29.3203125 C 24.91172027587891 28.65937423706055 24.91172027587891 27.59062576293945 24.25078201293945 26.93671798706055 L 15.32109355926514 18 Z" fill="#252427" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
