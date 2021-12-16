@@ -109,10 +109,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 Pinned.fromPins(
-                  Pin(size: 30.0, start: 53.0),
+                  Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.2025),
-                  child: Text(
-                    'Imie',
+                  child: TextField(
+                    decoration: InputDecoration(
+                    labelText: 'Imie',
+                       ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
@@ -122,10 +124,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 Pinned.fromPins(
-                  Pin(size: 38.0, start: 54.0),
+                  Pin(size: 300.0, start: 54.0),
                   Pin(size: 20.0, middle: 0.3459),
-                  child: Text(
-                    'Email',
+                  child: TextField(
+                    decoration: InputDecoration(
+                    labelText: 'Email',
+    ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
@@ -146,10 +150,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 Pinned.fromPins(
-                  Pin(size: 39.0, start: 54.0),
+                  Pin(size: 300.0, start: 54.0),
                   Pin(size: 20.0, middle: 0.4892),
-                  child: Text(
-                    'Haslo',
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Haslo',
+    ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
@@ -170,10 +176,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                 ),
                 Pinned.fromPins(
-                  Pin(size: 109.0, start: 54.0),
+                  Pin(size: 300.0, start: 54.0),
                   Pin(size: 20.0, middle: 0.6326),
-                  child: Text(
-                    'Potwierdz haslo',
+                  child: TextField(
+                    decoration: InputDecoration(
+                        labelText: 'Potwierdz haslo',
+    ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
@@ -334,7 +342,7 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
           Pinned.fromPins(
             Pin(size: 75.0, end: 8.0),
-            Pin(size: 20.0, middle: 0.2152),
+            Pin(size: 20.0, middle: 0.2052),
             child: PageLink(
               links: [
                 PageLinkInfo(
