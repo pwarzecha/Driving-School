@@ -19,9 +19,10 @@ class Wrapper extends StatelessWidget{
             final User? user = snapshot.data;
             return user == null ? SignInPage() : LoggedHomePage(); }
           else {
-            return Scaffold(body: Center (child: CircularProgressIndicator(),))
+            return Scaffold(body: Center (child: CircularProgressIndicator(),),
+            );
           }
-          }
-        });
+          },
+    );
   }
 }
