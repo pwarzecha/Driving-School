@@ -212,46 +212,33 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                       ),
                     ],
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromPins(
-                          Pin(start: 0.0, end: 0.0),
-                          Pin(start: 0.0, end: 0.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10.0),
-                              color: const Color(0xff252427),
-                            ),
+                    child: ElevatedButton(
+
+                      style:ButtonStyle(
+                          backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                              )
+                          )
+                      ),
+
+
+                      onPressed: () {
+
+                      },
+                      child: Container(
+                        child: Text(
+                          'Rejestracja',
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontSize: 18,
+                            color: const Color(0xffffffff),
+                            fontWeight: FontWeight.w500,
                           ),
+                          textAlign: TextAlign.left,
                         ),
-                        Pinned.fromPins(
-                          Pin(size: 153.0, middle: 0.6735),
-                          Pin(size: 25.0, middle: 0.5185),
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                transition: LinkTransition.Fade,
-                                ease: Curves.easeOut,
-                                duration: 0.3,
-                                pageBuilder: () => LoggedHomePage(
-                                  text6:
-                                      'Created by M. Gocal & P. Warzecha                                          ',
-                                ),
-                              ),
-                            ],
-                            child: Text(
-                              'Rejestracja           ',
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 18,
-                                color: const Color(0xffffffff),
-                                fontWeight: FontWeight.w500,
-                              ),
-                              textAlign: TextAlign.left,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
