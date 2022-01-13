@@ -2,10 +2,10 @@ import 'package:drivingschool/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:provider/provider.dart';
-import './SignUpPage.dart';
+import './sing_up_page.dart';
 import 'package:adobe_xd/page_link.dart';
-import './LoggedHomePage.dart';
-import './MainHomePage.dart';
+import './logged_home_page.dart';
+import './main_home_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SignInPage extends StatelessWidget {
@@ -155,12 +155,12 @@ class SignInPage extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 17.0, end: 30.0),
             Pin(size: 50.0, middle: 0.1851),
-            child: Text(
+            child: const Text(
               'E-DRIVE SCHOOL',
               style: TextStyle(
                 fontFamily: 'Quicksand',
                 fontSize: 40,
-                color: const Color(0xffffffff),
+                color: Color(0xffffffff),
                 fontWeight: FontWeight.w700,
               ),
               textAlign: TextAlign.left,
@@ -171,10 +171,10 @@ class SignInPage extends StatelessWidget {
             Pin(size: 15.0, end: 10.0),
             child: Text(
               text6,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
-                color: const Color(0xffa5a3a3),
+                color: Color(0xffa5a3a3),
               ),
               textAlign: TextAlign.left,
             ),
@@ -195,12 +195,12 @@ class SignInPage extends StatelessWidget {
                   ),
                 ),
               ],
-              child: Text.rich(
+              child: const Text.rich(
                 TextSpan(
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     fontSize: 14,
-                    color: const Color(0xffffffff),
+                    color: Color(0xffffffff),
                   ),
                   children: [
                     TextSpan(
@@ -285,12 +285,12 @@ class SignInPage extends StatelessWidget {
                 //);
                 },
                 child: Container(
-                child: Text(
+                child: const Text(
                 'Logowanie',
                 style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 18,
-                color: const Color(0xffffffff),
+                color: Color(0xffffffff),
                 fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.left,
@@ -353,12 +353,12 @@ class SignInPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(start: 21.0, end: 22.0),
                   Pin(size: 51.0, middle: 0.2),
-                  child: Text(
+                  child: const Text(
                     'Witaj z powrotem!',
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 36,
-                      color: const Color(0xff252427),
+                      color: Color(0xff252427),
                       fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.left,
@@ -367,14 +367,14 @@ class SignInPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.4035),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration (
                       labelText: 'E-mail ',
                     ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
-                      color: const Color(0xffa5a3a3),
+                      color: Color(0xffa5a3a3),
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -384,7 +384,7 @@ class SignInPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.5789),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration(
                       labelText: 'Haslo',
                       labelStyle: TextStyle(
@@ -394,7 +394,7 @@ class SignInPage extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
-                      color: const Color(0xffa5a3a3),
+                      color: Color(0xffa5a3a3),
                     ),
                     textAlign: TextAlign.left,
                   ),

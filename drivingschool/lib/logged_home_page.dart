@@ -42,12 +42,12 @@ class LoggedHomePage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 145.0, middle: 0.6516),
                   Pin(size: 52.0, end: 0.0),
-                  child: Text(
+                  child: const Text(
                     'Statystyki            \n',
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 18,
-                      color: const Color(0xffffffff),
+                      color: Color(0xffffffff),
                       fontWeight: FontWeight.w500,
                     ),
                     textAlign: TextAlign.left,
@@ -74,12 +74,12 @@ class LoggedHomePage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 129.0, middle: 0.6491),
                   Pin(size: 52.0, end: 0.0),
-                  child: Text(
+                  child: const Text(
                     'Egzamin           \n',
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 18,
-                      color: const Color(0xffffffff),
+                      color: Color(0xffffffff),
                       fontWeight: FontWeight.w500,
                     ),
                     textAlign: TextAlign.left,
@@ -106,12 +106,12 @@ class LoggedHomePage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 115.0, middle: 0.6486),
                   Pin(size: 52.0, end: 0.0),
-                  child: Text(
+                  child: const Text(
                     'Nauka            \n',
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 18,
-                      color: const Color(0xffffffff),
+                      color: Color(0xffffffff),
                       fontWeight: FontWeight.w500,
                     ),
                     textAlign: TextAlign.left,
@@ -123,12 +123,12 @@ class LoggedHomePage extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 48.0, end: 37.0),
             Pin(size: 79.0, middle: 0.4906),
-            child: Text(
+            child: const Text(
               'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 18,
-                color: const Color(0xff252427),
+                color: Color(0xff252427),
                 fontWeight: FontWeight.w600,
               ),
               textAlign: TextAlign.left,
@@ -140,9 +140,9 @@ class LoggedHomePage extends StatelessWidget {
             child:
                 // Adobe XD layer: 'human' (shape)
                 Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage('assets/images/img 2.png'),
+                  image: AssetImage('assets/images/img 2.png'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -267,12 +267,12 @@ class LoggedHomePage extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 23.5, end: 23.5),
             Pin(size: 50.0, start: 47.8),
-            child: Text(
+            child: const Text(
               'E-DRIVE SCHOOL',
               style: TextStyle(
                 fontFamily: 'Quicksand',
                 fontSize: 40,
-                color: const Color(0xffffffff),
+                color: Color(0xffffffff),
                 fontWeight: FontWeight.w700,
               ),
               textAlign: TextAlign.left,
@@ -283,10 +283,10 @@ class LoggedHomePage extends StatelessWidget {
             Pin(size: 15.0, end: 10.0),
             child: Text(
               text6,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
-                color: const Color(0xffa5a3a3),
+                color: Color(0xffa5a3a3),
               ),
               textAlign: TextAlign.left,
             ),

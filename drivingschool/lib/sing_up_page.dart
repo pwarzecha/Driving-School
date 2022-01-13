@@ -2,10 +2,10 @@ import 'package:drivingschool/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:provider/provider.dart';
-import './SignUpPage.dart';
+import './sing_up_page.dart';
 import 'package:adobe_xd/page_link.dart';
-import './LoggedHomePage.dart';
-import './MainHomePage.dart';
+import './logged_home_page.dart';
+import './main_home_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -155,12 +155,12 @@ class SignUpPage extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 17.0, end: 30.0),
             Pin(size: 50.0, middle: 0.1851),
-            child: Text(
+            child: const Text(
               'E-DRIVE SCHOOL',
               style: TextStyle(
                 fontFamily: 'Quicksand',
                 fontSize: 40,
-                color: const Color(0xffffffff),
+                color: Color(0xffffffff),
                 fontWeight: FontWeight.w700,
               ),
               textAlign: TextAlign.left,
@@ -300,12 +300,12 @@ class SignUpPage extends StatelessWidget {
                       //);
                     },
                     child: Container(
-                      child: Text(
+                      child: const Text(
                         'Zarejestruj',
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 18,
-                          color: const Color(0xffffffff),
+                          color: Color(0xffffffff),
                           fontWeight: FontWeight.w500,
                         ),
                         textAlign: TextAlign.left,
@@ -368,14 +368,14 @@ class SignUpPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.2435),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration (
                       labelText: 'E-mail ',
                     ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
-                      color: const Color(0xffa5a3a3),
+                      color: Color(0xffa5a3a3),
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -394,14 +394,14 @@ class SignUpPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.4035),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration (
                       labelText: 'Hasło',
                     ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
-                      color: const Color(0xffa5a3a3),
+                      color: Color(0xffa5a3a3),
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -411,7 +411,7 @@ class SignUpPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.5789),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration(
                       labelText: 'Powtórz Hasło',
                       labelStyle: TextStyle(
@@ -421,7 +421,7 @@ class SignUpPage extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 14,
-                      color: const Color(0xffa5a3a3),
+                      color: Color(0xffa5a3a3),
                     ),
                     textAlign: TextAlign.left,
                   ),

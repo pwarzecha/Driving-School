@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './MainHomePage.dart';
+import './main_home_page.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -78,12 +78,12 @@ class _GuestLearningModePageState extends State<GuestLearningModePage> {
                   Pinned.fromPins(
                     Pin(size: 120.0, middle: 0.5),
                     Pin(size: 52.0, end: 0.0),
-                    child: Text(
+                    child: const Text(
                       'Odpowiedz C\n',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
-                        color: const Color(0xffffffff),
+                        color: Color(0xffffffff),
                         fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.left,
@@ -119,12 +119,12 @@ class _GuestLearningModePageState extends State<GuestLearningModePage> {
                   Pinned.fromPins(
                     Pin(size: 136.0, middle: 0.561),
                     Pin(size: 52.0, end: 0.0),
-                    child: Text(
+                    child: const Text(
                       'Odpowiedz B    \n',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
-                        color: const Color(0xffffffff),
+                        color: Color(0xffffffff),
                         fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.left,
@@ -162,12 +162,12 @@ class _GuestLearningModePageState extends State<GuestLearningModePage> {
                   Pinned.fromPins(
                     Pin(size: 119.0, middle: 0.5028),
                     Pin(size: 52.0, end: 0.0),
-                    child: Text(
+                    child: const Text(
                       'Odpowiedz A\n',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
-                        color: const Color(0xffffffff),
+                        color: Color(0xffffffff),
                         fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.left,
@@ -180,12 +180,12 @@ class _GuestLearningModePageState extends State<GuestLearningModePage> {
           Pinned.fromPins(
             Pin(size: 89.0, start: 50.0),
             Pin(size: 25.0, middle: 0.4353),
-            child: Text(
+            child: const Text(
               'PYTANIE 1:',
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 18,
-                color: const Color(0xff252427),
+                color: Color(0xff252427),
                 fontWeight: FontWeight.w600,
               ),
               textAlign: TextAlign.left,
@@ -197,9 +197,9 @@ class _GuestLearningModePageState extends State<GuestLearningModePage> {
             child:
                 // Adobe XD layer: 'car-silhouette-draw…' (shape)
                 Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage('assets/images/img1.png'),
+                  image: AssetImage('assets/images/img1.png'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -239,10 +239,10 @@ class _GuestLearningModePageState extends State<GuestLearningModePage> {
             Pin(size: 15.0, end: 10.0),
             child: Text(
               widget.text6,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
-                color: const Color(0xffa5a3a3),
+                color: Color(0xffa5a3a3),
               ),
               textAlign: TextAlign.left,
             ),

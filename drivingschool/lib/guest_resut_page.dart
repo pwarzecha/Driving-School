@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './MainHomePage.dart';
+import './main_home_page.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -157,12 +157,12 @@ class GuestResultPage extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 17.0, end: 30.0),
             Pin(size: 50.0, middle: 0.1851),
-            child: Text(
+            child: const Text(
               'E-DRIVE SCHOOL',
               style: TextStyle(
                 fontFamily: 'Quicksand',
                 fontSize: 40,
-                color: const Color(0xffffffff),
+                color: Color(0xffffffff),
                 fontWeight: FontWeight.w700,
               ),
               textAlign: TextAlign.left,
@@ -171,12 +171,12 @@ class GuestResultPage extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 43.0, end: 43.0),
             Pin(size: 93.0, middle: 0.534),
-            child: Text(
+            child: const Text(
               'WYNIK EGZAMINU:\n',
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 32,
-                color: const Color(0xff252427),
+                color: Color(0xff252427),
                 fontWeight: FontWeight.w600,
               ),
               textAlign: TextAlign.left,
@@ -185,12 +185,12 @@ class GuestResultPage extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 199.0, middle: 0.4148),
             Pin(size: 93.0, middle: 0.6405),
-            child: Text(
+            child: const Text(
               'POZYTYWNY\n',
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 32,
-                color: const Color(0xff252427),
+                color: Color(0xff252427),
                 fontWeight: FontWeight.w600,
               ),
               textAlign: TextAlign.left,
@@ -200,9 +200,9 @@ class GuestResultPage extends StatelessWidget {
             Pin(size: 198.0, middle: 0.4633),
             Pin(size: 198.0, end: 55.0),
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage('assets/images/img3.png'),
+                  image: AssetImage('assets/images/img3.png'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -213,10 +213,10 @@ class GuestResultPage extends StatelessWidget {
             Pin(size: 15.0, end: 10.0),
             child: Text(
               text6,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
-                color: const Color(0xffa5a3a3),
+                color: Color(0xffa5a3a3),
               ),
               textAlign: TextAlign.left,
             ),

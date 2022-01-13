@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './SignInPage.dart';
+import './sing_in_page.dart';
 import 'package:adobe_xd/page_link.dart';
-import './GuestExamModePage.dart';
-import './GuestLearningModePage.dart';
+import './guest_exam_mode_page.dart';
+import './guest_learing_mode.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MainHomePage extends StatelessWidget {
@@ -81,10 +81,10 @@ class MainHomePage extends StatelessWidget {
                     ],
                     child: Text(
                       text5,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
-                        color: const Color(0xffffffff),
+                        color: Color(0xffffffff),
                         fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.left,
@@ -100,9 +100,9 @@ class MainHomePage extends StatelessWidget {
             child:
                 // Adobe XD layer: 'car-silhouette-draw…' (shape)
                 Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: const AssetImage('assets/images/img1.png'),
+                  image: AssetImage('assets/images/img1.png'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -140,10 +140,10 @@ class MainHomePage extends StatelessWidget {
                     Pin(size: 52.0, end: 0.0),
                     child: Text(
                       text4,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
-                        color: const Color(0xffffffff),
+                        color: Color(0xffffffff),
                         fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.left,
@@ -185,10 +185,10 @@ class MainHomePage extends StatelessWidget {
                     Pin(size: 52.0, end: 0.0),
                     child: Text(
                       text3,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 18,
-                        color: const Color(0xffffffff),
+                        color: Color(0xffffffff),
                         fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.left,
@@ -203,10 +203,10 @@ class MainHomePage extends StatelessWidget {
             Pin(size: 15.0, end: 10.0),
             child: Text(
               text6,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
-                color: const Color(0xffa5a3a3),
+                color: Color(0xffa5a3a3),
               ),
               textAlign: TextAlign.left,
             ),
@@ -216,10 +216,10 @@ class MainHomePage extends StatelessWidget {
             Pin(size: 79.0, middle: 0.5196),
             child: Text(
               text2,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 18,
-                color: const Color(0xff252427),
+                color: Color(0xff252427),
                 fontWeight: FontWeight.w600,
               ),
               textAlign: TextAlign.left,
@@ -344,12 +344,12 @@ class MainHomePage extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 23.5, end: 23.5),
             Pin(size: 50.0, start: 47.8),
-            child: Text(
+            child: const Text(
               'E-DRIVE SCHOOL',
               style: TextStyle(
                 fontFamily: 'Quicksand',
                 fontSize: 40,
-                color: const Color(0xffffffff),
+                color: Color(0xffffffff),
                 fontWeight: FontWeight.w700,
               ),
               textAlign: TextAlign.left,
