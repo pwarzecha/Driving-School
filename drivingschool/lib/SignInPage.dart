@@ -1,5 +1,7 @@
+import 'package:drivingschool/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:provider/provider.dart';
 import './SignUpPage.dart';
 import 'package:adobe_xd/page_link.dart';
 import './LoggedHomePage.dart';
@@ -15,6 +17,11 @@ class SignInPage extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final TextEditingController emailController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
+
+    final authService = Provider.of<AuthService>(context);
+
     return Scaffold(
       backgroundColor: const Color(0xff252427),
       body: Stack(
@@ -270,10 +277,12 @@ class SignInPage extends StatelessWidget {
                 ),
 
                 onPressed: () {
-                pageBuilder: () => LoggedHomePage(
-                text6:
-                'TEST',
-                );
+                  authService.signInWithEmailAndPassword(emailController.text, passwordController.text);
+                  
+                //pageBuilder: () => LoggedHomePage(
+                //text6:
+                //'TEST',
+                //);
                 },
                 child: Container(
                 child: Text(
