@@ -28,6 +28,23 @@ class _GuestExamModePageState extends State<GuestExamModePage> {
       backgroundColor: const Color(0xff252427),
       body: Stack(
         children: <Widget>[
+          SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 35,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Color(0xFF3F4768), width: 3),
+                    borderRadius: BorderRadius.circular(50),
+                  )
+                ),
+              ],
+            )
+          //),
+          ),
+
+
           Pinned.fromPins(
             Pin(start: 0.0, end: 0.0),
             Pin(size: 575.0, end: -158.0),
@@ -164,7 +181,7 @@ class _GuestExamModePageState extends State<GuestExamModePage> {
             Pin(size: 89.0, start: 50.0),
             Pin(size: 25.0, middle: 0.4353),
             child: const Text(
-              'PYTANIE 1:',
+              'PYTANIE:   ',
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 18,
@@ -201,7 +218,7 @@ class _GuestExamModePageState extends State<GuestExamModePage> {
           ),
           Pinned.fromPins(
             Pin(size: 189.0, middle: 0.4677),
-            Pin(size: 158.0, start: 44.0),
+            Pin(size: 158.0, start: 74.0),
             child:
                 // Adobe XD layer: 'car-silhouette-draw…' (shape)
                 Container(
