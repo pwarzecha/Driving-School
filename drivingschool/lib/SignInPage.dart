@@ -295,7 +295,29 @@ class SignInPage extends StatelessWidget {
                 ),
                 textAlign: TextAlign.left,
                 ),
-
+                //     links: [
+                //       PageLinkInfo(
+                //         transition: LinkTransition.Fade,
+                //         ease: Curves.easeOut,
+                //         duration: 0.3,
+                //         pageBuilder: () => MainHomePage(
+                //           text5: 'Logowanie            \n',
+                //           text4: 'Egzamin         \n',
+                //           text3: 'Nauka    \n',
+                //           text6:
+                //               'Created by M. Gocal & P. Warzecha                                          ',
+                //           text2:
+                //               'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
+                //         ),
+                //       ),
+                //     ],
+                //     child: SvgPicture.string(
+                //       _svg_gqisop,
+                //       allowDrawingOutsideViewBox: true,
+                //       fit: BoxFit.fill,
+                //     ),
+                //   ),
+                // ),
                 ),
                 ),
                 ),
