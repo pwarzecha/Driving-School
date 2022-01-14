@@ -1,13 +1,29 @@
+import 'package:drivingschool/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import './sign_in_page.dart';
+import 'package:adobe_xd/page_link.dart';
+import './guest_exam_mode_page.dart';
+import './guest_learing_mode_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'exam_mode_page.dart';
+import 'learning_mode_page.dart';
+
 class LoggedHomePage extends StatelessWidget {
+  final String text5;
+  final String text4;
+  final String text3;
   final String text6;
+  final String text2;
   LoggedHomePage({
     Key key,
+    this.text5 = 'Logowanie            \n',
+    this.text4 = 'Egzamin         \n',
+    this.text3 = 'Nauka    \n',
     this.text6 =
-        'Created by M. Gocal & P. Warzecha                                          ',
+    'Created by M. Gocal & P. Warzecha                                          ',
+    this.text2 = 'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -17,267 +33,221 @@ class LoggedHomePage extends StatelessWidget {
         children: <Widget>[
           Pinned.fromPins(
             Pin(start: 0.0, end: 0.0),
-            Pin(start: 158.0, end: -67.0),
+            Pin(start: 159.0, end: -68.0),
             child: SvgPicture.string(
-              _svg_sliy,
+              _svg_y8czg8,
               allowDrawingOutsideViewBox: true,
               fit: BoxFit.fill,
             ),
           ),
           Pinned.fromPins(
-            Pin(start: 31.0, end: 44.0),
-            Pin(size: 65.0, end: 31.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 13.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xff252427),
-                    ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 145.0, middle: 0.6516),
-                  Pin(size: 52.0, end: 0.0),
-                  child: const Text(
-                    'Statystyki            \n',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 18,
-                      color: Color(0xffffffff),
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 31.0, end: 44.0),
-            Pin(size: 63.0, middle: 0.8093),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 11.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xff252427),
-                    ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 129.0, middle: 0.6491),
-                  Pin(size: 52.0, end: 0.0),
-                  child: const Text(
-                    'Egzamin           \n',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 18,
-                      color: Color(0xffffffff),
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 31.0, end: 44.0),
-            Pin(size: 64.0, middle: 0.6744),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 12.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xff252427),
-                    ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 115.0, middle: 0.6486),
-                  Pin(size: 52.0, end: 0.0),
-                  child: const Text(
-                    'Nauka            \n',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 18,
-                      color: Color(0xffffffff),
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 48.0, end: 37.0),
-            Pin(size: 79.0, middle: 0.4906),
-            child: const Text(
-              'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                fontSize: 18,
-                color: Color(0xff252427),
-                fontWeight: FontWeight.w600,
+            Pin(start: 43.0, end: 32.0),
+            Pin(size: 52.0, end: 53.0),
+            child: ElevatedButton(
+              style:ButtonStyle(
+                  backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      )
+                  )
               ),
-              textAlign: TextAlign.left,
+
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                );
+              },
+              child: const Text(
+                'Statystyki',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 18,
+                  color: Color(0xffffffff),
+                  fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.left,
+              ),
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 54.0, end: 6.0),
-            Pin(size: 56.0, middle: 0.2672),
+            Pin(size: 123.0, middle: 0.5),
+            Pin(size: 103.0, middle: 0.3073),
             child:
-                // Adobe XD layer: 'human' (shape)
-                Container(
+            // Adobe XD layer: 'car-silhouette-draw…' (shape)
+            Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/img 2.png'),
+                  image: AssetImage('assets/images/img1.png'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
           Pinned.fromPins(
-            Pin(start: 0.0, end: -49.0),
-            Pin(size: 251.0, start: -79.2),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 45.2),
-                  Pin(size: 88.3, start: 35.4),
-                  child: SvgPicture.string(
-                    _svg_n3e6aq,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 44.9),
-                  Pin(size: 93.6, start: 17.0),
-                  child: SvgPicture.string(
-                    _svg_gzsvjg,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 44.9),
-                  Pin(size: 93.6, start: 0.0),
-                  child: SvgPicture.string(
-                    _svg_u75m4,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 1.7, end: 47.2),
-                  Pin(size: 63.6, middle: 0.3685),
-                  child: SvgPicture.string(
-                    _svg_vuagy8,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 1.7, end: 46.1),
-                  Pin(size: 89.9, end: 20.0),
-                  child: SvgPicture.string(
-                    _svg_wg68cb,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 1.7, end: 46.1),
-                  Pin(size: 89.9, end: 0.0),
-                  child: SvgPicture.string(
-                    _svg_jdfrlm,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 30.3, middle: 0.4326),
-                  Pin(size: 10.3, end: 9.8),
-                  child: SvgPicture.string(
-                    _svg_jiewyq,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 98.6, start: 62.1),
-                  Pin(size: 26.3, end: 1.2),
-                  child: SvgPicture.string(
-                    _svg_rdql4t,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 98.6, middle: 0.3821),
-                  Pin(size: 26.3, middle: 0.1759),
-                  child: SvgPicture.string(
-                    _svg_fqpb,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 63.9, end: 47.0),
-                  Pin(size: 59.3, end: 6.0),
-                  child: SvgPicture.string(
-                    _svg_z23etd,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 63.9, end: 18.0),
-                  Pin(size: 59.3, end: 12.0),
-                  child: SvgPicture.string(
-                    _svg_rjiehh,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 63.9, end: 0.0),
-                  Pin(size: 59.3, end: 5.7),
-                  child: SvgPicture.string(
-                    _svg_b5bqv7,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 23.5, end: 23.5),
-            Pin(size: 50.0, start: 47.8),
-            child: const Text(
-              'E-DRIVE SCHOOL',
-              style: TextStyle(
-                fontFamily: 'Quicksand',
-                fontSize: 40,
-                color: Color(0xffffffff),
-                fontWeight: FontWeight.w700,
+            Pin(start: 43.0, end: 32.0),
+            Pin(size: 52.0, middle: 0.7900),
+            // Pinned.fromPins(
+            // Pin(start: 43.0, end: 32.0),
+            // Pin(size: 52.0, end: 39.0),
+            child: ElevatedButton(
+              style:ButtonStyle(
+                  backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      )
+                  )
               ),
-              textAlign: TextAlign.left,
+
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ExamModePage()),
+                );
+              },
+              child: const Text(
+                'Egzamin',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 18,
+                  color: Color(0xffffffff),
+                  fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.left,
+              ),
             ),
           ),
+          //   child: PageLink(
+          //     links: [
+          //       PageLinkInfo(
+          //         transition: LinkTransition.Fade,
+          //         ease: Curves.easeOut,
+          //         duration: 0.3,
+          //         pageBuilder: () => GuestExamModePage(
+          //           text6:
+          //               'Created by M. Gocal & P. Warzecha                                          ',
+          //         ),
+          //       ),
+          //     ],
+          //     child: Stack(
+          //       children: <Widget>[
+          //         Pinned.fromPins(
+          //           Pin(start: 0.0, end: 0.0),
+          //           Pin(start: 0.0, end: 11.0),
+          //           child: ElevatedButton(
+          //             style:ButtonStyle(
+          //                 backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+          //                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          //                     RoundedRectangleBorder(
+          //                       borderRadius: BorderRadius.circular(18.0),
+          //                     )
+          //                 )
+          //             ),
+          //             onPressed: () {
+          //
+          //             },
+          //             child: Container(
+          //
+          //             ),
+          //           ),
+          //         ),
+          //         Pinned.fromPins(
+          //           Pin(size: 120.0, middle: 0.6167),
+          //           Pin(size: 52.0, end: 0.0),
+          //           child: Text(
+          //             text4,
+          //             style: const TextStyle(
+          //               fontFamily: 'Poppins',
+          //               fontSize: 18,
+          //               color: Color(0xffffffff),
+          //               fontWeight: FontWeight.w500,
+          //             ),
+          //             textAlign: TextAlign.left,
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
+          Pinned.fromPins(
+            Pin(start: 43.0, end: 32.0),
+            Pin(size: 52.0, middle: 0.667),
+            // Pinned.fromPins(
+            // Pin(start: 43.0, end: 32.0),
+            // Pin(size: 52.0, end: 53.0),
+            child: ElevatedButton(
+              style:ButtonStyle(
+                  backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      )
+                  )
+              ),
+
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LearningModePage()),
+                );
+              },
+              child: const Text(
+                'Nauka',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 18,
+                  color: Color(0xffffffff),
+                  fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ),
+          ),
+
+          //   child: PageLink(
+          //     links: [
+          //       PageLinkInfo(
+          //         transition: LinkTransition.Fade,
+          //         ease: Curves.easeOut,
+          //         duration: 0.3,
+          //         pageBuilder: () => GuestLearningModePage(
+          //           text6:
+          //               'Created by M. Gocal & P. Warzecha                                          ',
+          //         ),
+          //       ),
+          //     ],
+          //     child: Stack(
+          //       children: <Widget>[
+          //         Pinned.fromPins(
+          //           Pin(start: 0.0, end: 0.0),
+          //           Pin(start: 0.0, end: 12.0),
+          //           child: Container(
+          //             decoration: BoxDecoration(
+          //               borderRadius: BorderRadius.circular(10.0),
+          //               color: const Color(0xff252427),
+          //             ),
+          //           ),
+          //         ),
+          //         Pinned.fromPins(
+          //           Pin(size: 78.0, middle: 0.5405),
+          //           Pin(size: 52.0, end: 0.0),
+          //           child: Text(
+          //             text3,
+          //             style: const TextStyle(
+          //               fontFamily: 'Poppins',
+          //               fontSize: 18,
+          //               color: Color(0xffffffff),
+          //               fontWeight: FontWeight.w500,
+          //             ),
+          //             textAlign: TextAlign.left,
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
           Pinned.fromPins(
             Pin(size: 287.0, end: -77.0),
             Pin(size: 15.0, end: 10.0),
@@ -291,14 +261,158 @@ class LoggedHomePage extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
           ),
+          Pinned.fromPins(
+            Pin(start: 54.0, end: 31.0),
+            Pin(size: 79.0, middle: 0.5196),
+            child: Text(
+              text2,
+              style: const TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 18,
+                color: Color(0xff252427),
+                fontWeight: FontWeight.w600,
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(start: 0.0, end: -24.0),
+            Pin(size: 266.0, start: -79.2),
+            child: Stack(
+              children: <Widget>[
+                Pinned.fromPins(
+                  Pin(start: 0.0, end: 20.2),
+                  Pin(size: 88.3, start: 35.4),
+                  child: SvgPicture.string(
+                    _svg_n3e6aq,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(start: 0.0, end: 19.9),
+                  Pin(size: 93.6, start: 17.0),
+                  child: SvgPicture.string(
+                    _svg_gzsvjg,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(start: 0.0, end: 19.9),
+                  Pin(size: 93.6, start: 0.0),
+                  child: SvgPicture.string(
+                    _svg_u75m4,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(start: 1.7, end: 22.2),
+                  Pin(size: 63.6, middle: 0.3412),
+                  child: SvgPicture.string(
+                    _svg_vuagy8,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(start: 1.7, end: 21.1),
+                  Pin(size: 89.9, end: 35.0),
+                  child: SvgPicture.string(
+                    _svg_wg68cb,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(start: 1.7, end: 21.1),
+                  Pin(size: 89.9, end: 15.0),
+                  child: SvgPicture.string(
+                    _svg_jdfrlm,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(size: 30.3, middle: 0.4619),
+                  Pin(size: 10.3, end: 24.8),
+                  child: SvgPicture.string(
+                    _svg_jiewyq,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(size: 98.6, middle: 0.2068),
+                  Pin(size: 26.3, end: 16.2),
+                  child: SvgPicture.string(
+                    _svg_rdql4t,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(size: 98.6, middle: 0.4139),
+                  Pin(size: 26.3, start: 39.5),
+                  child: SvgPicture.string(
+                    _svg_fqpb,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(size: 63.9, end: 22.0),
+                  Pin(size: 59.3, end: 21.0),
+                  child: SvgPicture.string(
+                    _svg_z23etd,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(size: 63.9, end: 18.0),
+                  Pin(size: 59.3, end: 5.0),
+                  child: SvgPicture.string(
+                    _svg_hpmu4q,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromPins(
+                  Pin(size: 63.9, end: 0.0),
+                  Pin(size: 59.3, end: 0.0),
+                  child: SvgPicture.string(
+                    _svg_sxf7wf,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(start: 23.5, end: 23.5),
+            Pin(size: 50.0, start: 47.8),
+            child: Text(
+              'E-DRIVE SCHOOL',
+              style: TextStyle(
+                fontFamily: 'Quicksand',
+                fontSize: 40,
+                color: const Color(0xffffffff),
+                fontWeight: FontWeight.w700,
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
         ],
       ),
     );
   }
 }
 
-const String _svg_sliy =
-    '<svg viewBox="0.0 158.0 375.0 575.0" ><path transform="translate(0.0, 158.0)" d="M 30 0 L 345 0 C 361.5685424804688 0 375 13.43145751953125 375 30 L 375 575 L 0 575 L 0 30 C 0 13.43145751953125 13.43145751953125 0 30 0 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
+const String _svg_y8czg8 =
+    '<svg viewBox="0.0 159.0 375.0 575.0" ><path transform="translate(0.0, 159.0)" d="M 30 0 L 345 0 C 361.5685424804688 0 375 13.43145751953125 375 30 L 375 575 L 0 575 L 0 30 C 0 13.43145751953125 13.43145751953125 0 30 0 Z" fill="#ffffff" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_n3e6aq =
     '<svg viewBox="-1.7 -11.9 378.8 88.3" ><path transform="matrix(0.99863, 0.052336, -0.052336, 0.99863, -441.85, -47.06)" d="M 445 77.97821807861328 C 445 77.97821807861328 487.24853515625 33.22148132324219 530.9285888671875 52.2930793762207 C 574.608642578125 71.36467742919922 578.9151611328125 87.0526123046875 618.9039916992188 77.97821807861328 C 658.892822265625 68.90382385253906 731.5891723632812 3.577344417572021 773.4236450195312 12.80553340911865 C 815.2581176757812 22.03372573852539 820.6937255859375 19.68680572509766 820.6937255859375 19.68680572509766" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
 const String _svg_gzsvjg =
@@ -319,7 +433,25 @@ const String _svg_fqpb =
     '<svg viewBox="122.7 -7.7 98.6 26.3" ><path transform="translate(-389.79, -213.1)" d="M 611.02294921875 207.7971954345703 C 611.02294921875 207.7971954345703 557.9444580078125 244.0721435546875 520.1260375976562 227.268310546875 C 482.3076171875 210.4644622802734 596.4263916015625 205.3966674804688 596.4263916015625 205.3966674804688" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_z23etd =
     '<svg viewBox="311.4 138.5 63.9 59.3" ><path transform="translate(-459.62, -46.45)" d="M 771.029541015625 244.2387084960938 C 771.029541015625 244.2387084960938 792.8095703125 230.5699615478516 804.7584838867188 219.9788970947266 C 816.7073974609375 209.3878326416016 834.90234375 184.9468841552734 834.90234375 184.9468841552734" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
-const String _svg_rjiehh =
-    '<svg viewBox="340.4 132.5 63.9 59.3" ><path transform="translate(-430.62, -52.45)" d="M 771.029541015625 244.2387084960938 C 771.029541015625 244.2387084960938 792.8095703125 230.5699615478516 804.7584838867188 219.9788970947266 C 816.7073974609375 209.3878326416016 834.90234375 184.9468841552734 834.90234375 184.9468841552734" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
-const String _svg_b5bqv7 =
-    '<svg viewBox="358.4 138.8 63.9 59.3" ><path transform="translate(-412.62, -46.13)" d="M 771.029541015625 244.2387084960938 C 771.029541015625 244.2387084960938 792.8095703125 230.5699615478516 804.7584838867188 219.9788970947266 C 816.7073974609375 209.3878326416016 834.90234375 184.9468841552734 834.90234375 184.9468841552734" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
+const String _svg_hpmu4q =
+    '<svg viewBox="315.4 154.5 63.9 59.3" ><path transform="translate(-455.62, -30.45)" d="M 771.029541015625 244.2387084960938 C 771.029541015625 244.2387084960938 792.8095703125 230.5699615478516 804.7584838867188 219.9788970947266 C 816.7073974609375 209.3878326416016 834.90234375 184.9468841552734 834.90234375 184.9468841552734" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
+const String _svg_sxf7wf =
+    '<svg viewBox="333.4 159.5 63.9 59.3" ><path transform="translate(-437.62, -25.45)" d="M 771.029541015625 244.2387084960938 C 771.029541015625 244.2387084960938 792.8095703125 230.5699615478516 804.7584838867188 219.9788970947266 C 816.7073974609375 209.3878326416016 834.90234375 184.9468841552734 834.90234375 184.9468841552734" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
+
+
+/*
+Pinned.fromPins(
+Pin(size: 54.0, end: 6.0),
+Pin(size: 56.0, middle: 0.2672),
+child:
+// Adobe XD layer: 'human' (shape)
+Container(
+decoration: const BoxDecoration(
+image: DecorationImage(
+image: AssetImage('assets/images/img 2.png'),
+fit: BoxFit.fill,
+),
+),
+),
+),
+*/

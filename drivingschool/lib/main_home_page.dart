@@ -3,7 +3,7 @@ import 'package:adobe_xd/pinned.dart';
 import './sign_in_page.dart';
 import 'package:adobe_xd/page_link.dart';
 import './guest_exam_mode_page.dart';
-import './guest_learing_mode.dart';
+import './guest_learing_mode_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MainHomePage extends StatelessWidget {

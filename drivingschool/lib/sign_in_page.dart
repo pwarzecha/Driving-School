@@ -278,7 +278,6 @@ class SignInPage extends StatelessWidget {
 
                     onPressed: () {
                       authService.signInWithEmailAndPassword(emailController.text, passwordController.text);
-
                     },
                     child: Container(
                           child: const Text(
@@ -396,7 +395,8 @@ class SignInPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.4035),
-                  child: const TextField(
+                  child: TextField(
+                    controller: emailController,
                     decoration: InputDecoration (
                       labelText: 'E-mail ',
                     ),
@@ -413,7 +413,8 @@ class SignInPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.5789),
-                  child: const TextField(
+                  child: TextField(
+                    controller: passwordController,
                     decoration: InputDecoration(
                       labelText: 'Haslo',
                       labelStyle: TextStyle(

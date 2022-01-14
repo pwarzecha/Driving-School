@@ -308,8 +308,13 @@ class SignUpPage extends StatelessWidget {
                         )
                     ),
 
-                    onPressed: () {
-                      authService.signInWithEmailAndPassword(emailController.text, passwordController.text);
+                    onPressed: () async {
+                      await authService.createUserWithEmailAndPassword(emailController.text, passwordController.text);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoggedHomePage()),
+                      );
+
 
                       //pageBuilder: () => LoggedHomePage(
                       //text6:
@@ -403,7 +408,8 @@ class SignUpPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.2435),
-                  child: const TextField(
+                  child:  TextField(
+                    controller: emailController,
                     decoration: InputDecoration (
                       labelText: 'E-mail ',
                     ),
@@ -429,7 +435,8 @@ class SignUpPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.4035),
-                  child: const TextField(
+                  child: TextField(
+                    controller: passwordController,
                     decoration: InputDecoration (
                       labelText: 'Hasło',
                     ),
