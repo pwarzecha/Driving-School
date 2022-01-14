@@ -20,9 +20,6 @@ class ProfilePage extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final TextEditingController emailController = TextEditingController();
-    final TextEditingController passwordController = TextEditingController();
-
     final authService = Provider.of<AuthService>(context);
 
     return Scaffold(
@@ -363,9 +360,12 @@ class ProfilePage extends StatelessWidget {
                         )
                     ),
 
-                    onPressed: () {
-
-
+                    onPressed: () async {
+                        await authService.signOut();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignInPage()),
+                        );
                       //pageBuilder: () => LoggedHomePage(
                       //text6:
                       //'TEST',

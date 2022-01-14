@@ -56,7 +56,7 @@ class LoggedHomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => StatisticPanel()),
+                  MaterialPageRoute(builder: (context) => ProfilePage()),
                 );
               },
               child: const Text(
