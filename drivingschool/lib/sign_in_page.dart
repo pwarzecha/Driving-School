@@ -2,18 +2,18 @@ import 'package:drivingschool/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:provider/provider.dart';
-import './sing_up_page.dart';
+import './sign_up_page.dart';
 import 'package:adobe_xd/page_link.dart';
 import './logged_home_page.dart';
 import './main_home_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignInPage extends StatelessWidget {
   final String text6;
-  SignUpPage({
+  SignInPage({
     Key? key,
     this.text6 =
-    'Created by M. Gocal & P. Warzecha                                          ',
+        'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -171,10 +171,10 @@ class SignUpPage extends StatelessWidget {
             Pin(size: 15.0, end: 10.0),
             child: Text(
               text6,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
-                color: const Color(0xffa5a3a3),
+                color: Color(0xffa5a3a3),
               ),
               textAlign: TextAlign.left,
             ),
@@ -183,42 +183,42 @@ class SignUpPage extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 214.0, end: 8.0),
             Pin(size: 20.0, middle: 0.3777),
-            // child: PageLink(
-            //   links: [
-            //     PageLinkInfo(
-            //       transition: LinkTransition.Fade,
-            //       ease: Curves.easeOut,
-            //       duration: 0.3,
-            //       pageBuilder: () => SignUpPage(
-            //         text6:
-            //         'Created by M. Gocal & P. Warzecha                                          ',
-            //       ),
-            //     ),
-            //   ],
-            //   child: Text.rich(
-            //     TextSpan(
-            //       style: TextStyle(
-            //         fontFamily: 'Poppins',
-            //         fontSize: 14,
-            //         color: const Color(0xffffffff),
-            //       ),
-            //       children: [
-            //         TextSpan(
-            //           text: 'Nie masz konta?',
-            //         ),
-            //         TextSpan(
-            //           text: ' Zarejestruj sie',
-            //           style: TextStyle(
-            //             decoration: TextDecoration.underline,
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //     textHeightBehavior:
-            //     TextHeightBehavior(applyHeightToFirstAscent: false),
-            //     textAlign: TextAlign.left,
-            //   ),
-            // ),
+            child: PageLink(
+              links: [
+                PageLinkInfo(
+                  transition: LinkTransition.Fade,
+                  ease: Curves.easeOut,
+                  duration: 0.3,
+                  pageBuilder: () => SignUpPage(
+                    text6:
+                        'Created by M. Gocal & P. Warzecha                                          ',
+                  ),
+                ),
+              ],
+              child: const Text.rich(
+                TextSpan(
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 14,
+                    color: Color(0xffffffff),
+                  ),
+                  children: [
+                    TextSpan(
+                      text: 'Nie masz konta?',
+                    ),
+                    TextSpan(
+                      text: ' Zarejestruj sie',
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ],
+                ),
+                textHeightBehavior:
+                    TextHeightBehavior(applyHeightToFirstAscent: false),
+                textAlign: TextAlign.left,
+              ),
+            ),
           ),
 
           Pinned.fromPins(
@@ -263,140 +263,142 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-
-                /////
                 Pinned.fromPins(
-                  Pin(start: 37.0, end: 38.0),
-                  Pin(size: 52.0, middle: 0.2249),
-
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      border: Border.all(
-                          width: 1.0, color: const Color(0xff252427)),
-                    ),
-                  ),
-                ),
-                //////
-                Pinned.fromPins(
-                  Pin(start: 37.0, end: 38.0),
-                  Pin(size: 52.0, middle: 0.7453),
-                  child: ElevatedButton(
+                Pin(start: 37.0, end: 38.0),
+                Pin(size: 52.0, middle: 0.7453),
+                    child: ElevatedButton(
                     style:ButtonStyle(
                         backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
+                          RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
-                            )
+                          )
                         )
                     ),
 
                     onPressed: () {
                       authService.signInWithEmailAndPassword(emailController.text, passwordController.text);
 
-                      //pageBuilder: () => LoggedHomePage(
-                      //text6:
-                      //'TEST',
-                      //);
                     },
                     child: Container(
-                      child: const Text(
-                        'Zarejestruj',
-                        style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                          color: Color(0xffffffff),
-                          fontWeight: FontWeight.w500,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      //     links: [
-                      //       PageLinkInfo(
-                      //         transition: LinkTransition.Fade,
-                      //         ease: Curves.easeOut,
-                      //         duration: 0.3,
-                      //         pageBuilder: () => MainHomePage(
-                      //           text5: 'Logowanie            \n',
-                      //           text4: 'Egzamin         \n',
-                      //           text3: 'Nauka    \n',
-                      //           text6:
-                      //               'Created by M. Gocal & P. Warzecha                                          ',
-                      //           text2:
-                      //               'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
-                      //         ),
-                      //       ),
-                      //     ],
-                      //     child: SvgPicture.string(
-                      //       _svg_gqisop,
-                      //       allowDrawingOutsideViewBox: true,
-                      //       fit: BoxFit.fill,
-                      //     ),
-                      //   ),
-                      // ),
-                    ),
-                  ),
+                          child: const Text(
+                          'Logowanie',
+                              style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 18,
+                                  color: Color(0xffffffff),
+                                  fontWeight: FontWeight.w500,
+                              ),
+                          textAlign: TextAlign.left,
+                          ),
+
                 ),
-                Pinned.fromPins(
-                  Pin(size: 13.5, start: 37.0),
-                  Pin(size: 23.6, start: 25.0),
-                  child:
-                  // Adobe XD layer: 'Icon ionic-ios-arro…' (shape)
-                  PageLink(
-                    links: [
-                      PageLinkInfo(
-                        transition: LinkTransition.Fade,
-                        ease: Curves.easeOut,
-                        duration: 0.3,
-                        pageBuilder: () => MainHomePage(
-                          text5: 'Logowanie            \n',
-                          text4: 'Egzamin         \n',
-                          text3: 'Nauka    \n',
-                          text6:
-                          'Created by M. Gocal & P. Warzecha                                          ',
-                          text2:
-                          'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
-                        ),
-                      ),
-                    ],
-                    child: SvgPicture.string(
-                      _svg_f7fq5,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
                 ),
-                Pinned.fromPins(
-                  Pin(size: 300.0, start: 53.0),
-                  Pin(size: 20.0, middle: 0.2435),
-                  child: const TextField(
-                    decoration: InputDecoration (
-                      labelText: 'E-mail ',
+                ),
+                //
+                // Container(
+                //     margin: const EdgeInsets.all(5),
+                //     child: ElevatedButton.icon(
+                //       onPressed: (){},
+                //       label: Text('Alarm Button'),
+                //       icon: Icon(Icons.access_alarm),
+                //       style: ElevatedButton.styleFrom(
+                //         primary: Colors.green,
+                //         textStyle: TextStyle(
+                //           color: Colors.black,
+                //           fontSize: 22,
+                //         ),
+                //       ),
+                //     )),
+                // Container(
+                //     margin: const EdgeInsets.all(5),
+                //     child: ElevatedButton.icon(
+                //       onPressed: (){},
+                //       label: Text('Group Button'),
+                //       icon: Icon(Icons.group_add_rounded),
+                //       style: ElevatedButton.styleFrom(
+                //         primary: Colors.purple,
+                //       ),
+                //     )),
+
+
+
+                Container(
+                    margin: const EdgeInsets.fromLTRB(20, 15, 0, 0),
+                    child:
+                  IconButton(
+                    onPressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MainHomePage()),
+                      );
+                    },
+
+                    icon: Icon(Icons.arrow_back),
+
                     ),
+
+                ),
+                // Pinned.fromPins(
+                //   Pin(size: 20.5, start: 37.0),
+                //   Pin(size: 23.6, start: 25.0),
+                //
+                //   child:
+                // ElevatedButton.icon(
+                // onPressed: (){
+                //
+                //   },
+                // label: Text('Group Button'),
+                // icon: Icon(Icons.arrow_back),
+                // style: ElevatedButton.styleFrom(
+                // primary: Colors.grey[850],
+                //   ),
+                // ),
+                //   // Adobe XD layer: 'Icon ionic-ios-arro…' (shape)
+                //   // PageLink(
+                //   //   // links: [
+                //   //   //   PageLinkInfo(
+                //   //   //     transition: LinkTransition.Fade,
+                //   //   //     ease: Curves.easeOut,
+                //   //   //     duration: 0.3,
+                //   //   //     pageBuilder: () => MainHomePage(
+                //   //   //       text5: 'Logowanie            \n',
+                //   //   //       text4: 'Egzamin         \n',
+                //   //   //       text3: 'Nauka    \n',
+                //   //   //       text6:
+                //   //   //       'Created by M. Gocal & P. Warzecha                                          ',
+                //   //   //       text2:
+                //   //   //       'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
+                //   //   //     ),
+                //   //   //   ),
+                //   //   // ],
+                //   //   child: SvgPicture.string(
+                //   //     _svg_f7fq5,
+                //   //     allowDrawingOutsideViewBox: true,
+                //   //     fit: BoxFit.fill,
+                //   //   ),
+                //   // ),
+                // ),
+                Pinned.fromPins(
+                  Pin(start: 41.0, end: 22.0),
+                  Pin(size: 51.0, middle: 0.2),
+                  child: const Text(
+                    'Witaj z powrotem!',
                     style: TextStyle(
                       fontFamily: 'Poppins',
-                      fontSize: 14,
-                      color: Color(0xffa5a3a3),
+                      fontSize: 36,
+                      color: Color(0xff252427),
+                      fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.left,
                   ),
-                  //////////////////////////
-                  // child: Text(
-                  //   'Witaj z powrotem!',
-                  //   style: TextStyle(
-                  //     fontFamily: 'Poppins',
-                  //     fontSize: 36,
-                  //     color: const Color(0xff252427),
-                  //     fontWeight: FontWeight.w600,
-                  //   ),
-                  //   textAlign: TextAlign.left,
-                  // ),
                 ),
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.4035),
                   child: const TextField(
                     decoration: InputDecoration (
-                      labelText: 'Hasło',
+                      labelText: 'E-mail ',
                     ),
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -413,7 +415,7 @@ class SignUpPage extends StatelessWidget {
                   Pin(size: 20.0, middle: 0.5789),
                   child: const TextField(
                     decoration: InputDecoration(
-                      labelText: 'Powtórz Hasło',
+                      labelText: 'Haslo',
                       labelStyle: TextStyle(
                         fontSize: 15,
                       ),
@@ -426,28 +428,6 @@ class SignUpPage extends StatelessWidget {
                     textAlign: TextAlign.left,
                   ),
                 ),
-
-                // Pinned.fromPins(
-                //   Pin(size: 159.0, middle: 0.6389),
-                //   Pin(size: 25.0, middle: 0.7317),
-                //
-                //     child: widget(
-                //       child: PageLink(
-                //         child: Text(
-                //           'Logowanie',
-                //           style: TextStyle(
-                //             fontFamily: 'Poppins',
-                //             fontSize: 18,
-                //             color: const Color(0xffffffff),
-                //             fontWeight: FontWeight.w500,
-                //           ),
-                //           textAlign: TextAlign.left,
-                //         )
-                //       ),
-                //       ),
-                //     ),
-                //
-                // ),
               ],
             ),
           ),

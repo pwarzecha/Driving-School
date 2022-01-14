@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './sing_in_page.dart';
+import './sign_in_page.dart';
 import 'package:adobe_xd/page_link.dart';
 import './guest_exam_mode_page.dart';
 import './guest_learing_mode.dart';
@@ -38,60 +38,33 @@ class MainHomePage extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(start: 43.0, end: 32.0),
-            Pin(size: 65.0, end: 25.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 13.0),
-                  child: PageLink(
-                    links: [
-                      PageLinkInfo(
-                        transition: LinkTransition.Fade,
-                        ease: Curves.easeOut,
-                        duration: 0.3,
-                        pageBuilder: () => SignInPage(
-                          text6:
-                              'Created by M. Gocal & P. Warzecha                                          ',
-                        ),
-                      ),
-                    ],
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: const Color(0xff252427),
-                      ),
-                    ),
-                  ),
+            Pin(size: 52.0, end: 53.0),
+            child: ElevatedButton(
+              style:ButtonStyle(
+                  backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      )
+                  )
+              ),
+
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignInPage()),
+                );
+              },
+              child: const Text(
+                'Logowanie',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 18,
+                  color: Color(0xffffffff),
+                  fontWeight: FontWeight.w500,
                 ),
-                Pinned.fromPins(
-                  Pin(size: 154.0, middle: 0.6918),
-                  Pin(size: 52.0, end: 0.0),
-                  child: PageLink(
-                    links: [
-                      PageLinkInfo(
-                        transition: LinkTransition.Fade,
-                        ease: Curves.easeOut,
-                        duration: 0.3,
-                        pageBuilder: () => SignInPage(
-                          text6:
-                              'Created by M. Gocal & P. Warzecha                                          ',
-                        ),
-                      ),
-                    ],
-                    child: Text(
-                      text5,
-                      style: const TextStyle(
-                        fontFamily: 'Poppins',
-                        fontSize: 18,
-                        color: Color(0xffffffff),
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                ),
-              ],
+                textAlign: TextAlign.left,
+              ),
             ),
           ),
           Pinned.fromPins(
@@ -110,94 +83,167 @@ class MainHomePage extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(start: 43.0, end: 32.0),
-            Pin(size: 63.0, middle: 0.8192),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => GuestExamModePage(
-                    text6:
-                        'Created by M. Gocal & P. Warzecha                                          ',
-                  ),
-                ),
-              ],
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromPins(
-                    Pin(start: 0.0, end: 0.0),
-                    Pin(start: 0.0, end: 11.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: const Color(0xff252427),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromPins(
-                    Pin(size: 120.0, middle: 0.6167),
-                    Pin(size: 52.0, end: 0.0),
-                    child: Text(
-                      text4,
-                      style: const TextStyle(
-                        fontFamily: 'Poppins',
-                        fontSize: 18,
-                        color: Color(0xffffffff),
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+            Pin(size: 52.0, middle: 0.7900),
+    // Pinned.fromPins(
+    // Pin(start: 43.0, end: 32.0),
+    // Pin(size: 52.0, end: 39.0),
+    child: ElevatedButton(
+    style:ButtonStyle(
+    backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+    RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(18.0),
+    )
+    )
+    ),
+
+    onPressed: () {
+    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => GuestExamModePage()),
+    );
+    },
+    child: const Text(
+    'Egzamin',
+    style: TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 18,
+    color: Color(0xffffffff),
+    fontWeight: FontWeight.w500,
+    ),
+    textAlign: TextAlign.left,
+    ),
+    ),
+    ),
+          //   child: PageLink(
+          //     links: [
+          //       PageLinkInfo(
+          //         transition: LinkTransition.Fade,
+          //         ease: Curves.easeOut,
+          //         duration: 0.3,
+          //         pageBuilder: () => GuestExamModePage(
+          //           text6:
+          //               'Created by M. Gocal & P. Warzecha                                          ',
+          //         ),
+          //       ),
+          //     ],
+          //     child: Stack(
+          //       children: <Widget>[
+          //         Pinned.fromPins(
+          //           Pin(start: 0.0, end: 0.0),
+          //           Pin(start: 0.0, end: 11.0),
+          //           child: ElevatedButton(
+          //             style:ButtonStyle(
+          //                 backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+          //                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          //                     RoundedRectangleBorder(
+          //                       borderRadius: BorderRadius.circular(18.0),
+          //                     )
+          //                 )
+          //             ),
+          //             onPressed: () {
+          //
+          //             },
+          //             child: Container(
+          //
+          //             ),
+          //           ),
+          //         ),
+          //         Pinned.fromPins(
+          //           Pin(size: 120.0, middle: 0.6167),
+          //           Pin(size: 52.0, end: 0.0),
+          //           child: Text(
+          //             text4,
+          //             style: const TextStyle(
+          //               fontFamily: 'Poppins',
+          //               fontSize: 18,
+          //               color: Color(0xffffffff),
+          //               fontWeight: FontWeight.w500,
+          //             ),
+          //             textAlign: TextAlign.left,
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
           Pinned.fromPins(
             Pin(start: 43.0, end: 32.0),
-            Pin(size: 64.0, middle: 0.6844),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => GuestLearningModePage(
-                    text6:
-                        'Created by M. Gocal & P. Warzecha                                          ',
-                  ),
-                ),
-              ],
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromPins(
-                    Pin(start: 0.0, end: 0.0),
-                    Pin(start: 0.0, end: 12.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: const Color(0xff252427),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromPins(
-                    Pin(size: 78.0, middle: 0.5405),
-                    Pin(size: 52.0, end: 0.0),
-                    child: Text(
-                      text3,
-                      style: const TextStyle(
-                        fontFamily: 'Poppins',
-                        fontSize: 18,
-                        color: Color(0xffffffff),
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+            Pin(size: 52.0, middle: 0.667),
+    // Pinned.fromPins(
+    // Pin(start: 43.0, end: 32.0),
+    // Pin(size: 52.0, end: 53.0),
+    child: ElevatedButton(
+    style:ButtonStyle(
+    backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
+    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+    RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(18.0),
+    )
+    )
+    ),
+
+    onPressed: () {
+    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => GuestLearningModePage()),
+    );
+    },
+    child: const Text(
+    'Nauka',
+    style: TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 18,
+    color: Color(0xffffffff),
+    fontWeight: FontWeight.w500,
+    ),
+    textAlign: TextAlign.left,
+    ),
+    ),
+    ),
+
+          //   child: PageLink(
+          //     links: [
+          //       PageLinkInfo(
+          //         transition: LinkTransition.Fade,
+          //         ease: Curves.easeOut,
+          //         duration: 0.3,
+          //         pageBuilder: () => GuestLearningModePage(
+          //           text6:
+          //               'Created by M. Gocal & P. Warzecha                                          ',
+          //         ),
+          //       ),
+          //     ],
+          //     child: Stack(
+          //       children: <Widget>[
+          //         Pinned.fromPins(
+          //           Pin(start: 0.0, end: 0.0),
+          //           Pin(start: 0.0, end: 12.0),
+          //           child: Container(
+          //             decoration: BoxDecoration(
+          //               borderRadius: BorderRadius.circular(10.0),
+          //               color: const Color(0xff252427),
+          //             ),
+          //           ),
+          //         ),
+          //         Pinned.fromPins(
+          //           Pin(size: 78.0, middle: 0.5405),
+          //           Pin(size: 52.0, end: 0.0),
+          //           child: Text(
+          //             text3,
+          //             style: const TextStyle(
+          //               fontFamily: 'Poppins',
+          //               fontSize: 18,
+          //               color: Color(0xffffffff),
+          //               fontWeight: FontWeight.w500,
+          //             ),
+          //             textAlign: TextAlign.left,
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
           Pinned.fromPins(
             Pin(size: 287.0, end: -77.0),
             Pin(size: 15.0, end: 10.0),
@@ -344,12 +390,12 @@ class MainHomePage extends StatelessWidget {
           Pinned.fromPins(
             Pin(start: 23.5, end: 23.5),
             Pin(size: 50.0, start: 47.8),
-            child: const Text(
+            child: Text(
               'E-DRIVE SCHOOL',
               style: TextStyle(
                 fontFamily: 'Quicksand',
                 fontSize: 40,
-                color: Color(0xffffffff),
+                color: const Color(0xffffffff),
                 fontWeight: FontWeight.w700,
               ),
               textAlign: TextAlign.left,
