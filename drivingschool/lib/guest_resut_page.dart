@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class GuestResultPage extends StatelessWidget {
   final String text6;
   GuestResultPage({
-    Key? key,
+    Key key,
     this.text6 =
         'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);

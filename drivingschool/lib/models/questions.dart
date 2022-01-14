@@ -1,17 +1,16 @@
-class questions {
+class Question {
   final int id, answer;
   final String question;
   final List<String> options;
 
-
-  questions({this.id, this.question, this.answer, this.options});
+  Question({this.id, this.question, this.answer, this.options});
 }
 
 const List sample_data = [
   {
     "id": 1,
     "question":
-        "Flutter is an open-source UI software development kit created by ______",
+    "Flutter is an open-source UI software development kit created by ______",
     "options": ['Apple', 'Google', 'Facebook', 'Microsoft'],
     "answer_index": 1,
   },

@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
-import 'package:drivingschool/models/questions.dart';
+import 'package:drivingschool/models/Questions.dart';
 import 'package:drivingschool/score_screen.dart';
 
 // We use get package for our state management
@@ -15,27 +15,27 @@ class QuestionController extends GetxController
   // so that we can access our animation outside
   Animation get animation => this._animation;
 
-  late PageController _pageController;
+  PageController _pageController;
   PageController get pageController => this._pageController;
 
   List<Question> _questions = sample_data
       .map(
         (question) => Question(
-            id: question['id'],
-            question: question['question'],
-            options: question['options'],
-            answer: question['answer_index']),
-      )
+        id: question['id'],
+        question: question['question'],
+        options: question['options'],
+        answer: question['answer_index']),
+  )
       .toList();
   List<Question> get questions => this._questions;
 
   bool _isAnswered = false;
   bool get isAnswered => this._isAnswered;
 
-  late int _correctAns;
+  int _correctAns;
   int get correctAns => this._correctAns;
 
-  late int _selectedAns;
+  int _selectedAns;
   int get selectedAns => this._selectedAns;
 
   // for more about obs please check documentation

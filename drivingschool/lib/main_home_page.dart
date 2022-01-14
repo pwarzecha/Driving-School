@@ -13,7 +13,7 @@ class MainHomePage extends StatelessWidget {
   final String text6;
   final String text2;
   MainHomePage({
-    Key? key,
+    Key key,
     this.text5 = 'Logowanie            \n',
     this.text4 = 'Egzamin         \n',
     this.text3 = 'Nauka    \n',

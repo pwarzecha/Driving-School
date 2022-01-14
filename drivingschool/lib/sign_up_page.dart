@@ -13,7 +13,7 @@ import './main_home_page.dart';
 class SignUpPage extends StatelessWidget {
   final String text6;
   SignUpPage({
-    Key? key,
+    Key key,
     this.text6 =
     'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);

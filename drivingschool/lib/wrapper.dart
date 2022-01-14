@@ -12,11 +12,11 @@ class Wrapper extends StatelessWidget{
   Widget build(BuildContext context)
   {
     final authService = Provider.of<AuthService>(context);
-    return StreamBuilder<User?>(
+    return StreamBuilder<User>(
         stream: authService.user,
-        builder: (_, AsyncSnapshot<User?> snapshot){
+        builder: (_, AsyncSnapshot<User> snapshot){
           if (snapshot.connectionState == ConnectionState.active){
-            final User? user = snapshot.data;
+            final User user = snapshot.data;
             return user == null ? SignInPage() : LoggedHomePage(); }
           else {
             return Scaffold(body: Center (child: CircularProgressIndicator(),),

@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class GuestLearningModePage extends StatefulWidget {
   final String text6;
   GuestLearningModePage({
-    Key? key,
+    Key key,
     this.text6 =
         'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);

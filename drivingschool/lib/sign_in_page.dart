@@ -11,7 +11,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class SignInPage extends StatelessWidget {
   final String text6;
   SignInPage({
-    Key? key,
+    Key key,
     this.text6 =
         'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);
