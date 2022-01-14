@@ -1,8 +1,11 @@
+import 'package:drivingschool/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import './guest_resut_page.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:websafe_svg/websafe_svg.dart';
+
 
 class GuestExamModePage extends StatefulWidget {
   final String text6;
@@ -37,11 +40,36 @@ class _GuestExamModePageState extends State<GuestExamModePage> {
                   decoration: BoxDecoration(
                     border: Border.all(color: Color(0xFF3F4768), width: 3),
                     borderRadius: BorderRadius.circular(50),
-                  )
+                  ),
+                  child: Stack (
+                    children: [
+                      LayoutBuilder(builder:(context, constraints) => Container(
+                        width: constraints.maxWidth * 0.5,
+                        decoration: BoxDecoration(
+                          gradient: kPrimaryGradient,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
+                      ),
+                      Positioned.fill(
+                        child:Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: kDefaultPadding /2 ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("18 sec"),
+                              WebsafeSvg.asset("assets/icons/clock.svg"),
+                            ],
+                          ),
+                        ),
+
+                      ),
+                    ],
+                  ),
                 ),
               ],
             )
-          //),
           ),
 
 
