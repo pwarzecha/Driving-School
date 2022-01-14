@@ -1,14 +1,14 @@
-import 'package:drivingschool/profile_page.dart';
+import 'package:drivingschool/logged/profile_page.dart';
+import 'package:drivingschool/logged/statistic_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './sign_in_page.dart';
+import '../sign_in_page.dart';
 import 'package:adobe_xd/page_link.dart';
-import './guest_exam_mode_page.dart';
-import './guest_learing_mode_page.dart';
+import '../guest/guest_learning_mode_page_a.dart'; //tymczasowo
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'exam_mode_page.dart';
-import 'learning_mode_page.dart';
+import '../logged/exam_mode_page.dart';
+import '../logged/learning_mode_page.dart';
 
 class LoggedHomePage extends StatelessWidget {
   final String text5;
@@ -56,7 +56,7 @@ class LoggedHomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                  MaterialPageRoute(builder: (context) => StatisticPanel()),
                 );
               },
               child: const Text(
@@ -448,7 +448,7 @@ child:
 Container(
 decoration: const BoxDecoration(
 image: DecorationImage(
-image: AssetImage('assets/images/img 2.png'),
+image: AssetImage('assets/images/img2.png'),
 fit: BoxFit.fill,
 ),
 ),

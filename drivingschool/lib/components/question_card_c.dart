@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:drivingschool/controllers/question_controller.dart';
-import 'package:drivingschool/models/Questions.dart';
+import 'package:drivingschool/controllers/question_controller_c.dart';
+import 'package:drivingschool/models/Questions_c.dart';
 
 import '../../../constants.dart';
-import 'option.dart';
+import 'option_c.dart';
 
 class QuestionCard extends StatelessWidget {
   const QuestionCard({

@@ -1,11 +1,11 @@
-import 'package:drivingschool/main_home_page.dart';
+import 'package:drivingschool/guest/main_home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:drivingschool/constants.dart';
-import 'package:drivingschool/controllers/question_controller.dart';
+import 'package:drivingschool/controllers/question_controller_a.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ScoreScreen extends StatelessWidget {
+class ScoreScreenA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     QuestionController _qnController = Get.put(QuestionController());

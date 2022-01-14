@@ -5,10 +5,10 @@ import 'package:provider/provider.dart';
 import './sign_up_page.dart';
 import './sign_in_page.dart';
 import 'package:adobe_xd/page_link.dart';
-import './logged_home_page.dart';
-import './main_home_page.dart';
+import 'logged/logged_home_page.dart';
+import 'guest/main_home_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import './main_home_page.dart';
+import 'guest/main_home_page.dart';
 
 class SignUpPage extends StatelessWidget {
   final String text6;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:drivingschool/controllers/question_controller.dart';
+import 'package:drivingschool/controllers/question_controller_c.dart';
 
-import 'components/body.dart';
+import '../components/body_c.dart';
 
-class GuestExamModePage extends StatelessWidget {
+class GuestExamModePageC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     QuestionController _controller = Get.put(QuestionController());
@@ -18,7 +18,7 @@ class GuestExamModePage extends StatelessWidget {
           FlatButton(onPressed: _controller.nextQuestion, child: Text("Skip")),
         ],
       ),
-      body: Body(),
+      body: BodyC(),
     );
   }
 }

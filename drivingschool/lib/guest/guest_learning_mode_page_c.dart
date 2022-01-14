@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import './main_home_page.dart';
+import 'main_home_page.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class GuestLearningModePage extends StatefulWidget {
+class GuestLearningModePageC extends StatefulWidget {
   final String text6;
-  GuestLearningModePage({
+  GuestLearningModePageC({
     Key key,
     this.text6 =
         'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);
 
   @override
-  State<GuestLearningModePage> createState() => _GuestLearningModePageState();
+  State<GuestLearningModePageC> createState() => _GuestLearningModePageCState();
 }
 
-class _GuestLearningModePageState extends State<GuestLearningModePage> {
+class _GuestLearningModePageCState extends State<GuestLearningModePageC> {
   MaterialStateProperty<Color> getColor(Color color, Color colorPressed){
     final getColor = (Set<MaterialState> states) {
       if (states.contains(MaterialState.pressed)){

@@ -3,7 +3,7 @@ import 'package:drivingschool/wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'main_home_page.dart';
+import 'guest/main_home_page.dart';
 import 'sign_in_page.dart';
 import 'package:get/get.dart';
 

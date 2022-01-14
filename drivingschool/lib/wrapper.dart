@@ -1,4 +1,4 @@
-import 'package:drivingschool/logged_home_page.dart';
+import 'package:drivingschool/logged/logged_home_page.dart';
 import 'package:drivingschool/sign_in_page.dart';
 import 'package:drivingschool/services/auth_service.dart';
 import 'package:flutter/cupertino.dart';

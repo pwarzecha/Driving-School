@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
-import 'package:drivingschool/models/Questions.dart';
-import 'package:drivingschool/score_screen.dart';
+import 'package:drivingschool/models/Questions_a.dart';
+import 'package:drivingschool/score_screen_a.dart';
 
 // We use get package for our state management
 
@@ -107,7 +107,7 @@ class QuestionController extends GetxController
       _animationController.forward().whenComplete(nextQuestion);
     } else {
       // Get package provide us simple way to naviigate another page
-      Get.to(ScoreScreen());
+      Get.to(ScoreScreenA());
     }
   }
 

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:drivingschool/constants.dart';
-import 'package:drivingschool/controllers/question_controller.dart';
-import 'package:drivingschool/models/Questions.dart';
+import 'package:drivingschool/controllers/question_controller_a.dart';
+import 'package:drivingschool/models/Questions_a.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'progress_bar.dart';
-import 'question_card.dart';
+import 'progress_bar_a.dart';
+import 'question_card_a.dart';
 
-class Body extends StatelessWidget {
-  const Body({
+class BodyA extends StatelessWidget {
+  const BodyA({
     Key key,
   }) : super(key: key);
 

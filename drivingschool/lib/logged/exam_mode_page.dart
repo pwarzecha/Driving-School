@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:drivingschool/controllers/question_controller.dart';
+import 'package:drivingschool/controllers/question_controller_a.dart';
 
-import 'components/body.dart';
+import '../components/body_a.dart';
 
 class ExamModePage extends StatelessWidget {
   @override
@@ -18,7 +18,7 @@ class ExamModePage extends StatelessWidget {
           FlatButton(onPressed: _controller.nextQuestion, child: Text("Skip")),
         ],
       ),
-      body: Body(),
+      body: BodyA(),
     );
   }
 }
