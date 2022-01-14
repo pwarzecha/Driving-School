@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'main_home_page.dart';
 import 'sign_in_page.dart';
+import 'package:get/get.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
           Provider<AuthService>(create: (_) => AuthService(),
           ),
         ],
-      child: MaterialApp(
+      child: GetMaterialApp(
         home: Wrapper(),
       )
 
