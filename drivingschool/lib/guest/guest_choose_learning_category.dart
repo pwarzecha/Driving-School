@@ -55,10 +55,17 @@ class GuestChooseLearningCategory extends StatelessWidget {
               ),
 
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GuestLearningModePageC()),
-                );
+                //Tu testuj przycisk i alert
+                
+
+
+
+
+
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => GuestLearningModePageC()),
+                // );
               },
               child: const Text(
                 'Kategoria C',
