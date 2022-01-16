@@ -56,7 +56,7 @@ class GuestChooseLearningCategory extends StatelessWidget {
 
               onPressed: () {
                 //Tu testuj przycisk i alert
-                
+
 
 
 
