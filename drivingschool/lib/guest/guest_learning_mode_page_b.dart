@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:drivingschool/controllers/question_controller_a.dart';
+import 'package:drivingschool/controllers/question_controller_b_lm.dart';
 
 import '../components/body_b_lm.dart';
 
 class GuestLearningModePageB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    QuestionController _controller = Get.put(QuestionController());
+    QuestionControllerLM _controller = Get.put(QuestionControllerLM());
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(

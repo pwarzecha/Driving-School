@@ -16,7 +16,7 @@ class BodyCLM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // So that we have acccess our controller
-    QuestionControllerLM _questionControllerLM = Get.put(QuestionControllerLM());
+    QuestionControllerLM _questionController = Get.put(QuestionControllerLM());
     return Stack(
       children: [
         SafeArea(
@@ -36,14 +36,14 @@ class BodyCLM extends StatelessWidget {
                       () => Text.rich(
                     TextSpan(
                       text:
-                      "Question ${_questionControllerLM.questionNumber.value}",
+                      "Question ${_questionController.questionNumber.value}",
                       style: Theme.of(context)
                           .textTheme
                           .headline4
                           .copyWith(color: Colors.white),
                       children: [
                         TextSpan(
-                          text: "/${_questionControllerLM.questions.length}",
+                          text: "/${_questionController.questions.length}",
                           style: Theme.of(context)
                               .textTheme
                               .headline5
@@ -60,11 +60,11 @@ class BodyCLM extends StatelessWidget {
                 child: PageView.builder(
                   // Block swipe to next qn
                   physics: NeverScrollableScrollPhysics(),
-                  controller: _questionControllerLM.pageController,
-                  onPageChanged: _questionControllerLM.updateTheQnNum,
-                  itemCount: _questionControllerLM.questions.length,
+                  controller: _questionController.pageController,
+                  onPageChanged: _questionController.updateTheQnNum,
+                  itemCount: _questionController.questions.length,
                   itemBuilder: (context, index) => QuestionCard(
-                      question: _questionControllerLM.questions[index]),
+                      question: _questionController.questions[index]),
                 ),
               ),
             ],

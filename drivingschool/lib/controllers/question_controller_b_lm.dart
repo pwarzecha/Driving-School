@@ -7,7 +7,7 @@ import 'package:drivingschool/models/Questions_b.dart';
 
 // We use get package for our state management
 
-class QuestionController extends GetxController
+class QuestionControllerLM extends GetxController
     with SingleGetTickerProviderMixin {
   // Lets animated our progress bar
 

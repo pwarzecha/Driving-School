@@ -278,10 +278,7 @@ class SignInPage extends StatelessWidget {
 
                     onPressed: () {
                       authService.signInWithEmailAndPassword(emailController.text, passwordController.text);
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => LoggedHomePage()),
-                      );
+
                     },
                     child: Container(
                           child: const Text(
