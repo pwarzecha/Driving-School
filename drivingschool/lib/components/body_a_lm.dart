@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:drivingschool/constants.dart';
-import 'package:drivingschool/controllers/question_controller_a_lm.dart';
+import 'package:drivingschool/controllers/question_controller_a.dart';
 import 'package:drivingschool/models/Questions_a.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,7 +16,7 @@ class BodyALM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // So that we have acccess our controller
-    QuestionControllerLM _questionController = Get.put(QuestionControllerLM());
+    QuestionController _questionController = Get.put(QuestionController());
     return Stack(
       children: [
         SafeArea(
