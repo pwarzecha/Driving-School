@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'guest/main_home_page.dart';
 import 'sign_in_page.dart';
 import 'package:get/get.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 void main() async {
