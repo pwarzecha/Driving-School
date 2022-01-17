@@ -8,8 +8,7 @@ import './exam_mode_page_b.dart';
 import './exam_mode_page_c.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../logged/exam_mode_page.dart';
-import '../logged/learning_mode_page.dart';
+
 
 class ChooseExamCategory extends StatelessWidget {
   final String text5;

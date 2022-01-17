@@ -2,13 +2,13 @@ import 'package:drivingschool/guest/main_home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:drivingschool/constants.dart';
-import 'package:drivingschool/controllers/question_controller_c.dart';
+import 'package:drivingschool/controllers/question_controller_b_lm.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ScoreScreenC extends StatelessWidget {
+class ScoreScreenB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    QuestionControllerC _qnController = Get.put(QuestionControllerC());
+    QuestionControllerLMB _qnController = Get.put(QuestionControllerLMB());
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,

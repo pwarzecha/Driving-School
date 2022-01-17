@@ -8,7 +8,7 @@ import 'package:flutter_svg/svg.dart';
 class ScoreScreenB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    QuestionController _qnController = Get.put(QuestionController());
+    QuestionControllerB _qnController = Get.put(QuestionControllerB());
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,

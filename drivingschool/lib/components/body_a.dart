@@ -16,7 +16,7 @@ class BodyA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // So that we have acccess our controller
-    QuestionController _questionController = Get.put(QuestionController());
+    QuestionControllerA _questionController = Get.put(QuestionControllerA());
     return Stack(
       children: [
         SafeArea(

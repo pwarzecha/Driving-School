@@ -6,8 +6,7 @@ import 'package:adobe_xd/page_link.dart';
 import '../guest/guest_learning_mode_page_a.dart'; //tymczasowo
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../logged/exam_mode_page.dart';
-import '../logged/learning_mode_page.dart';
+
 
 class StatisticPanel extends StatelessWidget {
   final String text5;
@@ -101,10 +100,7 @@ class StatisticPanel extends StatelessWidget {
               ),
 
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ExamModePage()),
-                );
+
               },
               child: const Text(
                 'Egzamin',
@@ -187,10 +183,7 @@ class StatisticPanel extends StatelessWidget {
               ),
 
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LearningModePage()),
-                );
+
               },
               child: const Text(
                 'Nauka',

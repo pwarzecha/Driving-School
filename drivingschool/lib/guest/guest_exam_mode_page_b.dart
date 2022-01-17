@@ -7,7 +7,7 @@ import '../components/body_b.dart';
 class GuestExamModePageB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    QuestionController _controller = Get.put(QuestionController());
+    QuestionControllerB _controller = Get.put(QuestionControllerB());
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(

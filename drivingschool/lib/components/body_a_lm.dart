@@ -16,7 +16,7 @@ class BodyALM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // So that we have acccess our controller
-    QuestionControllerLM _questionController = Get.put(QuestionControllerLM());
+    QuestionControllerLMA _questionController = Get.put(QuestionControllerLMA());
     return Stack(
       children: [
         SafeArea(

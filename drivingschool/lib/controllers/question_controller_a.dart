@@ -8,7 +8,7 @@ import 'package:drivingschool/score_screen_a.dart';
 
 // We use get package for our state management
 
-class QuestionController extends GetxController
+class QuestionControllerA extends GetxController
     with SingleGetTickerProviderMixin {
   // Lets animated our progress bar
 

@@ -7,7 +7,7 @@ import '../components/body_a_lm.dart';
 class GuestLearningModePageA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    QuestionControllerLM _controller = Get.put(QuestionControllerLM());
+    QuestionControllerLMA _controller = Get.put(QuestionControllerLMA());
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(

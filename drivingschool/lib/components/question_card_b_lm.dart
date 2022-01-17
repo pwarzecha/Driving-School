@@ -17,7 +17,7 @@ class QuestionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    QuestionControllerLM _controller = Get.put(QuestionControllerLM());
+    QuestionControllerLMB _controller = Get.put(QuestionControllerLMB());
     return Container(
       margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.all(kDefaultPadding),

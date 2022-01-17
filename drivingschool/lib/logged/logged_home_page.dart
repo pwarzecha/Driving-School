@@ -7,8 +7,6 @@ import 'package:adobe_xd/page_link.dart';
 import '../guest/guest_learning_mode_page_a.dart'; //tymczasowo
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../logged/exam_mode_page.dart';
-import '../logged/learning_mode_page.dart';
 import 'choose_exam_category.dart';
 import 'choose_learning_category.dart';
 

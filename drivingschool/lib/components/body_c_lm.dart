@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:drivingschool/constants.dart';
-import 'package:drivingschool/controllers/question_controller_a_lm.dart';
-import 'package:drivingschool/models/Questions_a.dart';
+import 'package:drivingschool/controllers/question_controller_c_lm.dart';
+import 'package:drivingschool/models/Questions_c.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'progress_bar_a.dart';
-import 'question_card_a.dart';
+import 'progress_bar_c.dart';
+import 'question_card_c.dart';
 
 class BodyCLM extends StatelessWidget {
   const BodyCLM({
@@ -16,7 +16,7 @@ class BodyCLM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // So that we have acccess our controller
-    QuestionControllerLM _questionController = Get.put(QuestionControllerLM());
+    QuestionControllerLMC _questionController = Get.put(QuestionControllerLMC());
     return Stack(
       children: [
         SafeArea(
