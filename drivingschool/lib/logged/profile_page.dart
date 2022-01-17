@@ -362,14 +362,11 @@ class ProfilePage extends StatelessWidget {
 
                     onPressed: () async {
                         await authService.signOut();
+
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => SignInPage()),
                         );
-                      //pageBuilder: () => LoggedHomePage(
-                      //text6:
-                      //'TEST',
-                      //);
                     },
                     child: Container(
                       child: const Text(

@@ -1,4 +1,6 @@
 import 'package:drivingschool/services/auth_service.dart';
+import 'package:drivingschool/widget/button_widget.dart';
+import 'package:drivingschool/widget/email_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:provider/provider.dart';
@@ -7,14 +9,32 @@ import 'package:adobe_xd/page_link.dart';
 import 'logged/logged_home_page.dart';
 import 'guest/main_home_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+//import 'package:form_field_validator/form_field_validator.dart';
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   final String text6;
   SignInPage({
     Key key,
     this.text6 =
-        'Created by M. Gocal & P. Warzecha                                          ',
+    'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);
+
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
+  final formKey = GlobalKey<FormState>();
+
+  final emailController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     final TextEditingController emailController = TextEditingController();
@@ -170,7 +190,7 @@ class SignInPage extends StatelessWidget {
             Pin(size: 287.0, end: -77.0),
             Pin(size: 15.0, end: 10.0),
             child: Text(
-              text6,
+              widget.text6,
               style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
@@ -191,7 +211,7 @@ class SignInPage extends StatelessWidget {
                   duration: 0.3,
                   pageBuilder: () => SignUpPage(
                     text6:
-                        'Created by M. Gocal & P. Warzecha                                          ',
+                    'Created by M. Gocal & P. Warzecha                                          ',
                   ),
                 ),
               ],
@@ -215,7 +235,7 @@ class SignInPage extends StatelessWidget {
                   ],
                 ),
                 textHeightBehavior:
-                    TextHeightBehavior(applyHeightToFirstAscent: false),
+                TextHeightBehavior(applyHeightToFirstAscent: false),
                 textAlign: TextAlign.left,
               ),
             ),
@@ -264,36 +284,47 @@ class SignInPage extends StatelessWidget {
                   ),
                 ),
                 Pinned.fromPins(
-                Pin(start: 37.0, end: 38.0),
-                Pin(size: 52.0, middle: 0.7453),
-                    child: ElevatedButton(
+                  Pin(start: 37.0, end: 38.0),
+                  Pin(size: 52.0, middle: 0.7453),
+                  child: ElevatedButton(
                     style:ButtonStyle(
                         backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
+                            RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
-                          )
+                            )
                         )
                     ),
 
                     onPressed: () {
+                      final form = formKey.currentState;
+
+                      if (form.validate()) {
+                        final email = emailController.text;
+
+                        ScaffoldMessenger.of(context)
+                          ..removeCurrentSnackBar()
+                          ..showSnackBar(SnackBar(
+                            content: Text('Your email is $email'),
+                          ));
+                      }
                       authService.signInWithEmailAndPassword(emailController.text, passwordController.text);
 
                     },
                     child: Container(
-                          child: const Text(
-                          'Logowanie',
-                              style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 18,
-                                  color: Color(0xffffffff),
-                                  fontWeight: FontWeight.w500,
-                              ),
-                          textAlign: TextAlign.left,
-                          ),
+                      child: const Text(
+                        'Logowanie',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 18,
+                          color: Color(0xffffffff),
+                          fontWeight: FontWeight.w500,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
 
-                ),
-                ),
+                    ),
+                  ),
                 ),
                 //
                 // Container(
@@ -324,8 +355,8 @@ class SignInPage extends StatelessWidget {
 
 
                 Container(
-                    margin: const EdgeInsets.fromLTRB(20, 15, 0, 0),
-                    child:
+                  margin: const EdgeInsets.fromLTRB(20, 15, 0, 0),
+                  child:
                   IconButton(
                     onPressed: (){
                       Navigator.push(
@@ -336,7 +367,7 @@ class SignInPage extends StatelessWidget {
 
                     icon: Icon(Icons.arrow_back),
 
-                    ),
+                  ),
 
                 ),
                 // Pinned.fromPins(
@@ -396,17 +427,16 @@ class SignInPage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.4035),
-                  child: TextField(
-                    controller: emailController,
-                    decoration: InputDecoration (
-                      labelText: 'E-mail ',
+                  child: Form(
+                    key: formKey,
+                    child: SingleChildScrollView(
+                      padding: EdgeInsets.all(0),
+                      child: Column(
+                        children: [
+                          EmailFieldWidget(controller: emailController),
+                        ],
+                      ),
                     ),
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 14,
-                      color: Color(0xffa5a3a3),
-                    ),
-                    textAlign: TextAlign.left,
                   ),
                 ),
 
@@ -438,7 +468,10 @@ class SignInPage extends StatelessWidget {
       ),
     );
   }
+
 }
+
+
 
 const String _svg_v68vph =
     '<svg viewBox="-2.5 -21.0 380.6 88.4" ><path transform="matrix(0.99863, 0.052336, -0.052336, 0.99863, 1.12, -20.97)" d="M -4.584056548454364e-16 66.06321716308594 C -4.584056548454364e-16 66.06321716308594 42.45092010498047 21.30648040771484 86.3402099609375 40.37807846069336 C 130.2295074462891 59.44967651367188 134.5566558837891 75.13761138916016 174.7370452880859 66.06321716308594 C 214.9174346923828 56.98882293701172 287.9620361328125 -8.337656021118164 329.9968872070312 0.8905324935913086 C 372.0317687988281 10.11872482299805 377.493408203125 7.771804809570312 377.493408203125 7.771804809570312" fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="4" stroke-linecap="round" /></svg>';

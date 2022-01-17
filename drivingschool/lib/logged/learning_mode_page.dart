@@ -4,6 +4,7 @@ import '../guest/main_home_page.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+
 class LearningModePage extends StatefulWidget {
   final String text6;
   LearningModePage({
