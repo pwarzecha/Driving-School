@@ -80,7 +80,17 @@ class QuestionControllerLMB extends GetxController
     _correctAns = question.answer;
     _selectedAns = selectedIndex;
 
-    if (_correctAns == _selectedAns) _numOfCorrectAns++;
+    int multiplier;
+    if(question.id >= 1 && question.id <= 10){
+      multiplier = 3;
+    } else if (question.id >= 11 && question.id <= 16) {
+      multiplier = 2;
+    } else {
+      multiplier = 1;
+    }
+
+    if (_correctAns == _selectedAns) _numOfCorrectAns += multiplier;
+    //if (_correctAns == _selectedAns) _numOfCorrectAns++;
 
     // It will stop the counter
     _animationController.stop();
