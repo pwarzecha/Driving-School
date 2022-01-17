@@ -23,7 +23,7 @@ class AuthService {
       ) async{
     final credential = await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
     // create a new document for the user with the uid
-    await DatabaseService().updateUserData('name', 0 , 100);
+    //await DatabaseService().updateUserData('name', 0 , 100);
     return _userFromFirebase(credential.user);
   }
 

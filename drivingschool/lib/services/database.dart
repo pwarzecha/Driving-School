@@ -1,19 +1,20 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+
 class DatabaseService {
 
   final String uid;
   DatabaseService({ this.uid });
 
   // collection reference
-  final CollectionReference brewCollection = FirebaseFirestore.instance.collection('brews');
+  final Stream<QuerySnapshot> users = FirebaseFirestore.instance.collection('users').snapshots();
 
-  Future<void> updateUserData(String name, int examCount, int passedExamCount) async {
-    return await brewCollection.doc(uid).set({
-      'name': name,
-      'examCount': examCount,
-      'passedExamCount': passedExamCount,
-    });
-  }
+  // Future<void> updateUserData(String name, int examCount, int passedExamCount) async {
+  //   return await users.doc(uid).set({
+  //     'examCount': examCount,
+  //     'name': name,
+  //     'passedExamCount': passedExamCount,
+  //   });
+  // }
 
 }
