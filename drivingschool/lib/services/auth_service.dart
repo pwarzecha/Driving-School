@@ -1,6 +1,7 @@
 
 import 'package:drivingschool/models/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:drivingschool/services/database.dart';
 
 class AuthService {
   final auth.FirebaseAuth _firebaseAuth = auth.FirebaseAuth.instance;
@@ -21,6 +22,8 @@ class AuthService {
       String password,
       ) async{
     final credential = await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
+    // create a new document for the user with the uid
+    await DatabaseService().updateUserData('name', 0 , 100);
     return _userFromFirebase(credential.user);
   }
 
