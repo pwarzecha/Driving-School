@@ -8,6 +8,16 @@ class Question {
 
 const List sample_data = [
   {
+    //PYTANIA PODSTAWOWE  1-20
+    //pytania za 3 punkty 1-10
+    //pytania za 2 punkty 11-16
+    //pytania za 1 punkt  17-20
+
+    //PYTANIA SPECJALISTYCZNE 21-32
+    //pytania za 3 punkty 21 -26
+    //pytania za 2 punkty 27 - 31
+    //pytania za 1 punkt 31 -32
+
     //numer pytania 99
 
     "id": 1,
