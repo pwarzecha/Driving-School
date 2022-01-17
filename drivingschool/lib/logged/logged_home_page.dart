@@ -85,6 +85,28 @@ class LoggedHomePage extends StatelessWidget {
               ),
             ),
           ),
+
+          Pinned.fromPins(
+          Pin(size: 300.0, middle: 2),
+          Pin(size: 103.0, middle: 0.2773),
+          child:
+          IconButton(
+            onPressed: (){
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfilePage()),
+              );
+
+            },
+              iconSize: 50,
+              color: Colors.grey[800],
+              icon: Icon(Icons.account_circle),
+              )
+          ),
+
+
+
           Pinned.fromPins(
             Pin(start: 43.0, end: 32.0),
             Pin(size: 52.0, middle: 0.7900),
