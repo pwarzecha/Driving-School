@@ -9,6 +9,15 @@ class ScoreScreenB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     QuestionControllerLMB _qnController = Get.put(QuestionControllerLMB());
+    bool result;
+    String resultText;
+    if (_qnController.numOfCorrectAns >= 68){
+      result = true;
+      resultText = "Pozytywny";
+    } else {
+      result = false;
+      resultText = "Negatywny";
+    }
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -26,6 +35,24 @@ class ScoreScreenB extends StatelessWidget {
               Spacer(),
               Text(
                 "${_qnController.numOfCorrectAns * 1} / 74",
+                //"${_qnController.questions.length * 1}",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4
+                    .copyWith(color: kSecondaryColor),
+              ),
+              Spacer(flex: 3),
+              Text(
+                "Wynik egzaminu: ${resultText} ",
+                //"${_qnController.questions.length * 1}",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4
+                    .copyWith(color: kSecondaryColor),
+              ),
+              Spacer(flex: 3),
+              Text(
+                "Wynik egzaminu: ${resultText} ",
                 //"${_qnController.questions.length * 1}",
                 style: Theme.of(context)
                     .textTheme
