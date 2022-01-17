@@ -9,6 +9,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../logged/exam_mode_page.dart';
 import '../logged/learning_mode_page.dart';
+import 'choose_exam_category.dart';
+import 'choose_learning_category.dart';
 
 class LoggedHomePage extends StatelessWidget {
   final String text5;
@@ -126,7 +128,7 @@ class LoggedHomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ExamModePage()),
+                  MaterialPageRoute(builder: (context) => ChooseExamCategory()),
                 );
               },
               child: const Text(
@@ -212,7 +214,7 @@ class LoggedHomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LearningModePage()),
+                  MaterialPageRoute(builder: (context) => ChooseLearningCategory()),
                 );
               },
               child: const Text(
