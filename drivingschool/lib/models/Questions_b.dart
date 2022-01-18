@@ -7,17 +7,17 @@ class Question {
 }
 
 const List sample_data = [
-
-  //PYTANIA PODSTAWOWE  1-20
-  //pytania za 3 punkty 1-10
-  //pytania za 2 punkty 11-16
-  //pytania za 1 punkt  17-20
-
-  //PYTANIA SPECJALISTYCZNE 21-32
-  //pytania za 3 punkty 21 -26
-  //pytania za 2 punkty 27 - 31
-  //pytania za 1 punkt 31 -32
   {
+    //PYTANIA PODSTAWOWE  1-20
+    //pytania za 3 punkty 1-10
+    //pytania za 2 punkty 11-16
+    //pytania za 1 punkt  17-20
+
+    //PYTANIA SPECJALISTYCZNE 21-32
+    //pytania za 3 punkty 21 -26
+    //pytania za 2 punkty 27 - 31
+    //pytania za 1 punkt 31 -32
+
     //numer pytania 99
 
     "id": 1,
@@ -53,7 +53,6 @@ const List sample_data = [
     "options": ['TAK', 'NIE'],
     "answer_index": 1,
   },
-
   {
     //numer pytania 477
 
@@ -63,8 +62,6 @@ const List sample_data = [
     "options": ['TAK', 'NIE'],
     "answer_index": 1,
   },
-
-
   {
     //numer pytania 478
     "id": 7,
@@ -72,16 +69,13 @@ const List sample_data = [
     "options": ['TAK', 'NIE'],
     "answer_index": 0,
   },
-
-
   {
-   //numer pytania 486
+    //numer pytania 486
     "id": 8,
     "question": "Czy w tej sytuacji wolno Ci skręcić w prawo, jeśli nie spowodujesz tym utrudnienia ruchu?",
     "options": ['TAK', 'NIE'],
     "answer_index": 1,
   },
-
   {
     //numer pytania 748
     "id": 9,
@@ -96,8 +90,6 @@ const List sample_data = [
     "options": ['TAK', 'NIE'],
     "answer_index": 1,
   },
-
-///////////
   {
     //4049
     "id": 11,
@@ -143,7 +135,7 @@ const List sample_data = [
     "options": ['TAK', 'NIE'],
     "answer_index": 1,
   },
-/////////////////////////
+  /////////////////////////
 
 
   //4243
@@ -175,7 +167,6 @@ const List sample_data = [
     "options": ['TAK', 'NIE'],
     "answer_index": 0,
   },
-
   //pytania specjalistyczne
   {
     //6324
@@ -190,14 +181,14 @@ const List sample_data = [
     //6337
     "id": 22,
     "question": "Jaką funkcję spełnia system przeciwblokujący (ABS)?",
-    "options": ['Skraca drogę hamowania w każdych warunkach.', 'Zapobiega zerwaniu przyczepności opon podczas przyspieszania.', 'Ułatwia omijanie przeszkód w czasie hamowania.'],
+    "options": ['Skraca drogę hamowania\n w każdych warunkach.', 'Zapobiega zerwaniu\n  przyczepności opon podczas\n  przyspieszania.', 'Ułatwia omijanie przeszkód\n w czasie hamowania.'],
     "answer_index": 2,
   },
   {
     //6340
     "id": 23,
     "question": "Jaką funkcję spełniają poduszki powietrzne?",
-    "options": ['Zmniejszają uszkodzenia pojazdu podczas zderzenia.', 'Zapewniają pełną ochronę kierującego i pasażerów podczas zderzenia.','Zmniejszają obrażenia ciała, jakim może ulec kierujący i pasażerowie w wyniku zderzenia.'],
+    "options": ['Zmniejszają uszkodzenia pojazdu\n podczas zderzenia.', 'Zapewniają pełną ochronę\n kierującego i pasażerów podczas\n zderzenia.','Zmniejszają obrażenia ciała,\n jakim może ulec kierujący i\n pasażerowie w wyniku zderzenia.'],
     "answer_index": 2,
   },
   {
@@ -211,7 +202,7 @@ const List sample_data = [
     //6361
     "id": 25,
     "question": "Kiedy masz obowiązek przełączyć światła drogowe na światła mijania?",
-    "options": ['Gdy z przeciwka nadjeżdża inny pojazd.', 'Gdy zaczyna padać deszcz.','Gdy wjeżdżasz na obszar zabudowany.'],
+    "options": ['Gdy z przeciwka nadjeżdża\n inny pojazd.', 'Gdy zaczyna padać deszcz.','Gdy wjeżdżasz na obszar\n zabudowany.'],
     "answer_index": 0,
   },
   {
@@ -230,14 +221,14 @@ const List sample_data = [
     //4367
     "id": 27,
     "question": "Który z wymienionych czynników może ograniczyć pole widzenia kierującego samochodem osobowym?",
-    "options": ['Używanie klimatyzacji podczas opadów deszczu.', 'Lusterko wewnętrzne.','Oślepiające światła innych pojazdów jadących z przeciwka.'],
+    "options": ['Używanie klimatyzacji podczas\n opadów deszczu.', 'Lusterko wewnętrzne.','Oślepiające światła innych\n pojazdów jadących z przeciwka.'],
     "answer_index":2,
   },
   {
     //4371
     "id": 28,
     "question": "Jaki wpływ ma prędkość jazdy na kąt widzenia kierującego samochodem osobowym?",
-    "options": ['Wraz ze wzrostem prędkości kąt widzenia jest większy.', 'Wraz ze wzrostem prędkości kąt widzenia jest mniejszy.', 'Nie ma żadnego wpływu.'],
+    "options": ['Wraz ze wzrostem prędkości\n kąt widzenia jest większy.', 'Wraz ze wzrostem prędkości\n kąt widzenia jest mniejszy.', 'Nie ma żadnego wpływu.'],
     "answer_index": 1,
   },
 
@@ -245,17 +236,17 @@ const List sample_data = [
     //4374
     "id": 29,
     "question": "Jak powinieneś postąpić, aby rozpędzić samochód osobowy na płaskim odcinku drogi?",
-    "options": ['Wykorzystać maksymalne obroty silnika na każdym biegu.', 'Przyspieszyć do takiej prędkości na niższym biegu, by po włączeniu następnego biegu pojazd nie szarpał i nie dusił się.', 'W każdym przypadku zwiększyć biegi o dwa.'],
+    "options": ['Wykorzystać maksymalne obroty\n silnika na każdym biegu.', 'Przyspieszyć do takiej prędkości\n na niższym biegu, by po włączeniu\n  następnego biegu pojazd nie\n  szarpał i nie dusił się.', 'W każdym przypadku zwiększyć\n biegi o dwa.'],
     "answer_index": 1,
   },
 
-    {
+  {
 
     //numer pytania 6367
     "id": 30,
     "question": "Kiedy, w tej sytuacji, wolno Ci powrócić na prawy pas ruchu, po wykonaniu manewru wyprzedzania?",
-    "options": ['Niezwłocznie po zauważeniu krawędzi wyprzedzanego pojazdu w lusterku zewnętrznym.', 'Niezwłocznie po zauważeniu światła wyprzedzanego pojazdu w lusterku zewnętrznym.', 'Po upewnieniu się, że nie zmusi to kierującego pojazdem wyprzedzanym do hamowania lub zmiany toru jazdy.'],
-    "answer_index": 2,
+    "options": [ 'Niezwłocznie po zauważeniu\n światła wyprzedzanego pojazdu w\n lusterku zewnętrznym.', 'Po upewnieniu się, że nie zmusi\n to kierującego pojazdem\n wyprzedzanym do hamowania'],
+    "answer_index": 1,
   },
   {
     ///6426
@@ -270,8 +261,7 @@ const List sample_data = [
     //6430
     "id": 32,
     "question": "Którym z pojazdów możesz kierować posiadając prawo jazdy kategorii B1?",
-    "options": ['Motocyklem z wózkiem bocznym.', 'Czterokołowcem.', 'Każdym pojazdem samochodowym o masie własnej wynoszącej 650 kg.'],
+    "options": ['Motocyklem z wózkiem bocznym.', 'Czterokołowcem.', 'Każdym pojazdem\n samochodowym o masie\n własnej wynoszącej 650 kg.'],
     "answer_index": 1,
   },
-
 ];
