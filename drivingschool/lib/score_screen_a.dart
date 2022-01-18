@@ -4,18 +4,20 @@ import 'package:get/get.dart';
 import 'package:drivingschool/constants.dart';
 import 'package:drivingschool/controllers/question_controller_a.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:drivingschool/logged/statistic_panel.dart';
 
 class ScoreScreenA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     QuestionControllerA _qnController = Get.put(QuestionControllerA());
+    StatisticPanel statisticPanel = Get.put(StatisticPanel());
     bool result;
     String resultText;
     if (_qnController.numOfCorrectAns >= 68){
-      result = true;
+      statisticPanel.posExams += 1;
       resultText = "Pozytywny";
     } else {
-      result = false;
+      statisticPanel.posExams -= 1;
       resultText = "Negatywny";
     }
     return Scaffold(

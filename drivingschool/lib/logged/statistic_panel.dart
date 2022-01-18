@@ -13,22 +13,39 @@ class passingExams {
 }
 
 class StatisticPanel extends StatefulWidget {
+  int posExams = 1;
+  int negExams = 1;
+
+
   @override
   State<StatisticPanel> createState() => _StatisticPanelState();
+
+  List<passingExams> getChartData() {
+    final List<passingExams> chartData = [
+      passingExams("Pozytywny", posExams),
+      passingExams("Negatywny", negExams),
+    ];
+    return chartData;
+  }
 }
 
 class _StatisticPanelState extends State<StatisticPanel> {
   List<passingExams> _chartData;
 
+
   @override
   void initState() {
-    _chartData = getChartData();
+    _chartData = widget.getChartData();
     super.initState();
   }
 
   //final Stream<QuerySnapshot> users = FirebaseFirestore.instance.collection('users').snapshots();
   @override
   Widget build(BuildContext context) {
+    final int negativeExams = widget.negExams;
+    final int positiveExams = widget.posExams;
+
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -46,12 +63,12 @@ class _StatisticPanelState extends State<StatisticPanel> {
 
               ),
               Text(
-                  'Liczba niezdanych egzaminow: 3',
+                  'Liczba niezdanych egzaminow: $negativeExams',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)
 
               ),
               Text(
-                  'Liczba zdanych egzaminow: 1',
+                  'Liczba zdanych egzaminow: $positiveExams',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600)
 
               ),
@@ -99,13 +116,7 @@ class _StatisticPanelState extends State<StatisticPanel> {
     );
   }
 
-  List<passingExams> getChartData(){
-    final List<passingExams> chartData = [
-      passingExams("Pozytywny", 1),
-      passingExams("Negatywny", 3),
-    ];
-    return chartData;
-  }
+
 }
 
 
