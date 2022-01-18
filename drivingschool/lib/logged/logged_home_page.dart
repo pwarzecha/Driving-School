@@ -1,4 +1,5 @@
 import 'package:drivingschool/logged/profile_page.dart';
+import 'package:drivingschool/logged/show_all_users.dart';
 import 'package:drivingschool/logged/statistic_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
@@ -84,6 +85,25 @@ class LoggedHomePage extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+
+          Pinned.fromPins(
+            Pin(size: 60.0, middle: 0.97),
+            Pin(size: 60.0, middle: 0.385),
+            child:
+            IconButton(
+              onPressed: (){
+
+              Navigator.push(
+              context,
+            MaterialPageRoute(builder: (context) => ShowAllUsers()),
+            );
+
+            },
+            iconSize: 50,
+            color: Colors.grey[800],
+            icon: new Image.asset('assets/images/admin.jpg'),
+            )
           ),
 
           Pinned.fromPins(

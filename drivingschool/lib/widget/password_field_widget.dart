@@ -50,9 +50,9 @@ class _PasswordFieldWidgetState extends State<PasswordFieldWidget> {
     ),
     keyboardType: TextInputType.emailAddress,
     autofillHints: [AutofillHints.email],
-    // validator: (password) => password != null && !PasswordValidator.validate(password)
-    //     ? 'Wpisz poprawne hasło'
-    //     : null,
+    validator: (password) => password == null
+        ? 'Wpisz poprawne hasło'
+         : null,
 
   );
 }
