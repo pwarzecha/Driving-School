@@ -252,6 +252,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
 
+
                 /////
                 Pinned.fromPins(
                   Pin(start: 37.0, end: 38.0),
@@ -277,6 +278,23 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                 ),
+                Pinned.fromPins(
+                  Pin(start: -325, end: 38.0),
+                  Pin(size: 52.0, middle: 0.0001),
+                  child: IconButton(
+
+                    onPressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MainHomePage()),
+                      );
+                    },
+
+                    icon: Icon(Icons.arrow_back),
+
+                  ),
+
+                ),
                 //
                 // Pinned.fromPins(
                 //   Pin(start: 90.0, end: 10.0),
@@ -293,23 +311,10 @@ class ProfilePage extends StatelessWidget {
                 //   ),
                 // ),
 
-                Pinned.fromPins(
-                  Pin(start: 9.0, end: 800),
-                  Pin(size: 0.2, middle: 0.0001),
-                  child: IconButton(
+               // Pin(size: 123.0, middle: 0.95),
+                //Pin(size: 103.0, middle: 0.2453),
 
-                    onPressed: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => MainHomePage()),
-                      );
-                    },
 
-                    icon: Icon(Icons.arrow_back),
-
-                  ),
-
-                ),
 
                 //////
                 Pinned.fromPins(

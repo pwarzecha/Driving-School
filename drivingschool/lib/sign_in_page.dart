@@ -261,17 +261,23 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                 ),
-                Pinned.fromPins(
-                  Pin(start: 37.0, end: 38.0),
-                  Pin(size: 52.0, middle: 0.3962),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      border: Border.all(
-                          width: 1.0, color: const Color(0xff252427)),
-                    ),
-                  ),
-                ),
+
+
+                //obramówki do pol do wpisywania
+
+                // Pinned.fromPins(
+                //   Pin(start: 37.0, end: 38.0),
+                //   Pin(size: 52.0, middle: 0.3962),
+                //   child: Container(
+                //     decoration: BoxDecoration(
+                //       borderRadius: BorderRadius.circular(10.0),
+                //       border: Border.all(
+                //           width: 1.0, color: const Color(0xff252427)),
+                //     ),
+                //   ),
+                // ),
+
+
                 Pinned.fromPins(
                   Pin(start: 37.0, end: 38.0),
                   Pin(size: 52.0, middle: 0.5849),
@@ -424,9 +430,11 @@ class _SignInPageState extends State<SignInPage> {
                     textAlign: TextAlign.left,
                   ),
                 ),
+
+
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
-                  Pin(size: 20.0, middle: 0.4035),
+                  Pin(size: 100.0, middle: 0.4035),
                   child: Form(
                     key: formKey,
                     child: SingleChildScrollView(
