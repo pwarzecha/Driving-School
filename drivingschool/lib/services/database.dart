@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 
 
 class DatabaseService {
@@ -7,7 +7,7 @@ class DatabaseService {
   DatabaseService({ this.uid });
 
   // collection reference
-  final Stream<QuerySnapshot> users = FirebaseFirestore.instance.collection('users').snapshots();
+  //final Stream<QuerySnapshot> users = FirebaseFirestore.instance.collection('users').snapshots();
 
   // Future<void> updateUserData(String name, int examCount, int passedExamCount) async {
   //   return await users.doc(uid).set({
