@@ -15,7 +15,12 @@ class GuestLearningModePageB extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          FlatButton(onPressed: _controller.nextQuestion, child: Text("Skip")),
+          TextButton(
+              onPressed: _controller.nextQuestion,
+              style: TextButton.styleFrom(
+                primary: Colors.grey[800],
+              ),
+              child: Text("Skip")),
         ],
       ),
       body: BodyBLM(),

@@ -1,6 +1,7 @@
 import 'package:drivingschool/services/auth_service.dart';
 import 'package:drivingschool/widget/button_widget.dart';
 import 'package:drivingschool/widget/email_field_widget.dart';
+import 'package:drivingschool/widget/password_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:provider/provider.dart';
@@ -278,17 +279,21 @@ class _SignInPageState extends State<SignInPage> {
                 // ),
 
 
-                Pinned.fromPins(
-                  Pin(start: 37.0, end: 38.0),
-                  Pin(size: 52.0, middle: 0.5849),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      border: Border.all(
-                          width: 1.0, color: const Color(0xff252427)),
-                    ),
-                  ),
-                ),
+                // Pinned.fromPins(
+                //   Pin(start: 37.0, end: 38.0),
+                //   Pin(size: 52.0, middle: 0.5849),
+                //   child: Container(
+                //     decoration: BoxDecoration(
+                //       borderRadius: BorderRadius.circular(10.0),
+                //       border: Border.all(
+                //           width: 1.0, color: const Color(0xff252427)),
+                //     ),
+                //   ),
+                // ),
+
+
+
+
                 Pinned.fromPins(
                   Pin(start: 37.0, end: 38.0),
                   Pin(size: 52.0, middle: 0.7453),
@@ -332,36 +337,13 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                 ),
-                //
-                // Container(
-                //     margin: const EdgeInsets.all(5),
-                //     child: ElevatedButton.icon(
-                //       onPressed: (){},
-                //       label: Text('Alarm Button'),
-                //       icon: Icon(Icons.access_alarm),
-                //       style: ElevatedButton.styleFrom(
-                //         primary: Colors.green,
-                //         textStyle: TextStyle(
-                //           color: Colors.black,
-                //           fontSize: 22,
-                //         ),
-                //       ),
-                //     )),
-                // Container(
-                //     margin: const EdgeInsets.all(5),
-                //     child: ElevatedButton.icon(
-                //       onPressed: (){},
-                //       label: Text('Group Button'),
-                //       icon: Icon(Icons.group_add_rounded),
-                //       style: ElevatedButton.styleFrom(
-                //         primary: Colors.purple,
-                //       ),
-                //     )),
+
+
 
 
 
                 Container(
-                  margin: const EdgeInsets.fromLTRB(20, 15, 0, 0),
+                  margin: const EdgeInsets.fromLTRB(2, 0, 0, 0),
                   child:
                   IconButton(
                     onPressed: (){
@@ -376,49 +358,10 @@ class _SignInPageState extends State<SignInPage> {
                   ),
 
                 ),
-                // Pinned.fromPins(
-                //   Pin(size: 20.5, start: 37.0),
-                //   Pin(size: 23.6, start: 25.0),
-                //
-                //   child:
-                // ElevatedButton.icon(
-                // onPressed: (){
-                //
-                //   },
-                // label: Text('Group Button'),
-                // icon: Icon(Icons.arrow_back),
-                // style: ElevatedButton.styleFrom(
-                // primary: Colors.grey[850],
-                //   ),
-                // ),
-                //   // Adobe XD layer: 'Icon ionic-ios-arro…' (shape)
-                //   // PageLink(
-                //   //   // links: [
-                //   //   //   PageLinkInfo(
-                //   //   //     transition: LinkTransition.Fade,
-                //   //   //     ease: Curves.easeOut,
-                //   //   //     duration: 0.3,
-                //   //   //     pageBuilder: () => MainHomePage(
-                //   //   //       text5: 'Logowanie            \n',
-                //   //   //       text4: 'Egzamin         \n',
-                //   //   //       text3: 'Nauka    \n',
-                //   //   //       text6:
-                //   //   //       'Created by M. Gocal & P. Warzecha                                          ',
-                //   //   //       text2:
-                //   //   //       'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
-                //   //   //     ),
-                //   //   //   ),
-                //   //   // ],
-                //   //   child: SvgPicture.string(
-                //   //     _svg_f7fq5,
-                //   //     allowDrawingOutsideViewBox: true,
-                //   //     fit: BoxFit.fill,
-                //   //   ),
-                //   // ),
-                // ),
+
                 Pinned.fromPins(
                   Pin(start: 41.0, end: 22.0),
-                  Pin(size: 51.0, middle: 0.2),
+                  Pin(size: 51.0, middle: 0.1),
                   child: const Text(
                     'Witaj z powrotem!',
                     style: TextStyle(
@@ -432,16 +375,22 @@ class _SignInPageState extends State<SignInPage> {
                 ),
 
 
+
+
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
-                  Pin(size: 100.0, middle: 0.4035),
+                  Pin(size: 200.0, middle: 0.4789),
                   child: Form(
                     key: formKey,
                     child: SingleChildScrollView(
                       padding: EdgeInsets.all(0),
                       child: Column(
                         children: [
-                          EmailFieldWidget(controller: emailController),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 20),
+                              child: EmailFieldWidget(controller: emailController)),
+                          PasswordFieldWidget(controller: passwordController),
+
                         ],
                       ),
                     ),
@@ -449,29 +398,25 @@ class _SignInPageState extends State<SignInPage> {
                 ),
 
 
-                Pinned.fromPins(
-                  Pin(size: 300.0, start: 53.0),
-                  Pin(size: 20.0, middle: 0.5789),
-                  child: TextField(
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                      labelText: 'Haslo',
-                      labelStyle: TextStyle(
-                        fontSize: 15,
-                      ),
-                    ),
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 14,
-                      color: Color(0xffa5a3a3),
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
+                // Pinned.fromPins(
+                //   Pin(size: 300.0, start: 53.0),
+                //   Pin(size: 100.0, middle: 0.3035),
+                //   child: Form(
+                //     key: formKey,
+                //     child: SingleChildScrollView(
+                //       padding: EdgeInsets.all(0),
+                //       child: Column(
+                //         children: [
+                //           EmailFieldWidget(controller: emailController),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
+
               ],
             ),
           ),
-
         ],
       ),
     );

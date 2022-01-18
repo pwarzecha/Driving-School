@@ -30,6 +30,8 @@ dependencies:
   flutter:
     sdk: flutter
   adobe_xd: ^1.0.0+1
+  chewie: ^1.2.1
+  video_player: ^2.2.8
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -43,6 +45,7 @@ dependencies:
   websafe_svg: ^1.1.4
   email_validator: ^2.0.1
   syncfusion_flutter_charts: ^18.4.49
+  password_validator: ^0.0.1
   #cloud_firestore: ^0.16.0
 dev_dependencies:
   flutter_test:
