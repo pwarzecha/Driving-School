@@ -11,17 +11,27 @@ import 'package:drivingschool/guest/main_home_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   final String text6;
+
+
   ProfilePage({
     Key key,
     this.text6 =
     'Created by M. Gocal & P. Warzecha                                          ',
   }) : super(key: key);
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  String username = "user";
+  final usernameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final authService = Provider.of<AuthService>(context);
-
+    final TextEditingController usernameController = TextEditingController();
     return Scaffold(
       backgroundColor: const Color(0xff252427),
       body: Stack(
@@ -153,13 +163,13 @@ class ProfilePage extends StatelessWidget {
           //   ),
           // ),
           Pinned.fromPins(
-            Pin(start: 17.0, end: 30.0),
-            Pin(size: 50.0, middle: 0.1851),
-            child: const Text(
-              'PROFIL',
+            Pin(start: 40.0, end: 30.0),
+            Pin(size: 150.0, middle: 0.1851),
+            child: Text(
+              'PROFIL\n\nHello $username',
               style: TextStyle(
                 fontFamily: 'Quicksand',
-                fontSize: 40,
+                fontSize: 30,
                 color: Color(0xffffffff),
                 fontWeight: FontWeight.w700,
               ),
@@ -172,7 +182,7 @@ class ProfilePage extends StatelessWidget {
               child:
               // Adobe XD layer: 'car-silhouette-draw…' (shape)
               CircleAvatar(
-                backgroundColor: Colors.white,
+                backgroundImage: AssetImage('assets/images/img3.png'),
               )
           ),
           Pinned.fromPins(
@@ -193,7 +203,7 @@ class ProfilePage extends StatelessWidget {
             Pin(size: 287.0, end: -77.0),
             Pin(size: 15.0, end: 10.0),
             child: Text(
-              text6,
+              widget.text6,
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 10,
@@ -331,11 +341,9 @@ class ProfilePage extends StatelessWidget {
                     ),
 
                     onPressed: () {
-
-                      //pageBuilder: () => LoggedHomePage(
-                      //text6:
-                      //'TEST',
-                      //);
+                      setState(() {
+                        username = usernameController.text;;
+                      });
                     },
                     child: Container(
                       child: const Text(
@@ -423,7 +431,8 @@ class ProfilePage extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20, middle: 0.0935),
-                  child: const TextField(
+                  child:  TextField(
+                    controller: usernameController,
                     decoration: InputDecoration (
                       labelText: 'Imię',
                     ),
