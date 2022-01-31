@@ -82,33 +82,6 @@ class _StatisticPanelState extends State<StatisticPanel> {
               )],)
 
 
-              // Container(
-              //   height: 250,
-              //   padding: const EdgeInsets.symmetric(vertical: 20),
-              //   child: StreamBuilder<QuerySnapshot>(
-              //     stream: users,
-              //     builder: (
-              //     BuildContext context,
-              //         AsyncSnapshot<QuerySnapshot> snapshot,
-              //     ){
-              //       if (snapshot.hasError){
-              //         return Text('Wystapil blad');
-              //       }
-              //       if (snapshot.connectionState == ConnectionState.waiting){
-              //         return Text('Ladowanie');
-              //       }
-              //
-              //       final data = snapshot.requireData;
-              //
-              //       return ListView.builder(
-              //         itemCount: data.size,
-              //         itemBuilder: (context, index) {
-              //           return Text ('Imie: ${data.docs[index]['name']} and ${data.docs[index]['examCount']} and ${data.docs[index]['passedExamCount']}');
-              //         }
-              //       );
-              //     }
-              //   ),
-              // )
             ],
 
         ),

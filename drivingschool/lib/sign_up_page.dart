@@ -185,42 +185,7 @@ class SignUpPage extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 214.0, end: 8.0),
             Pin(size: 20.0, middle: 0.3777),
-            // child: PageLink(
-            //   links: [
-            //     PageLinkInfo(
-            //       transition: LinkTransition.Fade,
-            //       ease: Curves.easeOut,
-            //       duration: 0.3,
-            //       pageBuilder: () => SignUpPage(
-            //         text6:
-            //         'Created by M. Gocal & P. Warzecha                                          ',
-            //       ),
-            //     ),
-            //   ],
-            //   child: Text.rich(
-            //     TextSpan(
-            //       style: TextStyle(
-            //         fontFamily: 'Poppins',
-            //         fontSize: 14,
-            //         color: const Color(0xffffffff),
-            //       ),
-            //       children: [
-            //         TextSpan(
-            //           text: 'Nie masz konta?',
-            //         ),
-            //         TextSpan(
-            //           text: ' Zarejestruj sie',
-            //           style: TextStyle(
-            //             decoration: TextDecoration.underline,
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //     textHeightBehavior:
-            //     TextHeightBehavior(applyHeightToFirstAscent: false),
-            //     textAlign: TextAlign.left,
-            //   ),
-            // ),
+
           ),
 
           Pinned.fromPins(
@@ -332,29 +297,7 @@ class SignUpPage extends StatelessWidget {
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      //     links: [
-                      //       PageLinkInfo(
-                      //         transition: LinkTransition.Fade,
-                      //         ease: Curves.easeOut,
-                      //         duration: 0.3,
-                      //         pageBuilder: () => MainHomePage(
-                      //           text5: 'Logowanie            \n',
-                      //           text4: 'Egzamin         \n',
-                      //           text3: 'Nauka    \n',
-                      //           text6:
-                      //               'Created by M. Gocal & P. Warzecha                                          ',
-                      //           text2:
-                      //               'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
-                      //         ),
-                      //       ),
-                      //     ],
-                      //     child: SvgPicture.string(
-                      //       _svg_gqisop,
-                      //       allowDrawingOutsideViewBox: true,
-                      //       fit: BoxFit.fill,
-                      //     ),
-                      //   ),
-                      // ),
+
                     ),
                   ),
                 ),
@@ -376,35 +319,7 @@ class SignUpPage extends StatelessWidget {
                 ),
 
 
-                // Pinned.fromPins(
-                //   Pin(size: 13.5, start: 37.0),
-                //   Pin(size: 23.6, start: 25.0),
-                //   child:
-                //   // Adobe XD layer: 'Icon ionic-ios-arro…' (shape)
-                //   PageLink(
-                //     links: [
-                //       PageLinkInfo(
-                //         transition: LinkTransition.Fade,
-                //         ease: Curves.easeOut,
-                //         duration: 0.3,
-                //         pageBuilder: () => MainHomePage(
-                //           text5: 'Logowanie            \n',
-                //           text4: 'Egzamin         \n',
-                //           text3: 'Nauka    \n',
-                //           text6:
-                //           'Created by M. Gocal & P. Warzecha                                          ',
-                //           text2:
-                //           'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
-                //         ),
-                //       ),
-                //     ],
-                //     child: SvgPicture.string(
-                //       _svg_f7fq5,
-                //       allowDrawingOutsideViewBox: true,
-                //       fit: BoxFit.fill,
-                //     ),
-                //   ),
-                // ),
+
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20.0, middle: 0.2435),
@@ -420,17 +335,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                     textAlign: TextAlign.left,
                   ),
-                  //////////////////////////
-                  // child: Text(
-                  //   'Witaj z powrotem!',
-                  //   style: TextStyle(
-                  //     fontFamily: 'Poppins',
-                  //     fontSize: 36,
-                  //     color: const Color(0xff252427),
-                  //     fontWeight: FontWeight.w600,
-                  //   ),
-                  //   textAlign: TextAlign.left,
-                  // ),
+
                 ),
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),

@@ -119,58 +119,7 @@ class ChooseExamCategory extends StatelessWidget {
               ),
             ),
           ),
-          //   child: PageLink(
-          //     links: [
-          //       PageLinkInfo(
-          //         transition: LinkTransition.Fade,
-          //         ease: Curves.easeOut,
-          //         duration: 0.3,
-          //         pageBuilder: () => GuestExamModePage(
-          //           text6:
-          //               'Created by M. Gocal & P. Warzecha                                          ',
-          //         ),
-          //       ),
-          //     ],
-          //     child: Stack(
-          //       children: <Widget>[
-          //         Pinned.fromPins(
-          //           Pin(start: 0.0, end: 0.0),
-          //           Pin(start: 0.0, end: 11.0),
-          //           child: ElevatedButton(
-          //             style:ButtonStyle(
-          //                 backgroundColor:  MaterialStateProperty.all<Color>(const Color(0xff252427)),
-          //                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          //                     RoundedRectangleBorder(
-          //                       borderRadius: BorderRadius.circular(18.0),
-          //                     )
-          //                 )
-          //             ),
-          //             onPressed: () {
-          //
-          //             },
-          //             child: Container(
-          //
-          //             ),
-          //           ),
-          //         ),
-          //         Pinned.fromPins(
-          //           Pin(size: 120.0, middle: 0.6167),
-          //           Pin(size: 52.0, end: 0.0),
-          //           child: Text(
-          //             text4,
-          //             style: const TextStyle(
-          //               fontFamily: 'Poppins',
-          //               fontSize: 18,
-          //               color: Color(0xffffffff),
-          //               fontWeight: FontWeight.w500,
-          //             ),
-          //             textAlign: TextAlign.left,
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //   ),
-          // ),
+
           Pinned.fromPins(
             Pin(start: 43.0, end: 32.0),
             Pin(size: 52.0, middle: 0.667),
@@ -206,48 +155,6 @@ class ChooseExamCategory extends StatelessWidget {
             ),
           ),
 
-          //   child: PageLink(
-          //     links: [
-          //       PageLinkInfo(
-          //         transition: LinkTransition.Fade,
-          //         ease: Curves.easeOut,
-          //         duration: 0.3,
-          //         pageBuilder: () => GuestLearningModePage(
-          //           text6:
-          //               'Created by M. Gocal & P. Warzecha                                          ',
-          //         ),
-          //       ),
-          //     ],
-          //     child: Stack(
-          //       children: <Widget>[
-          //         Pinned.fromPins(
-          //           Pin(start: 0.0, end: 0.0),
-          //           Pin(start: 0.0, end: 12.0),
-          //           child: Container(
-          //             decoration: BoxDecoration(
-          //               borderRadius: BorderRadius.circular(10.0),
-          //               color: const Color(0xff252427),
-          //             ),
-          //           ),
-          //         ),
-          //         Pinned.fromPins(
-          //           Pin(size: 78.0, middle: 0.5405),
-          //           Pin(size: 52.0, end: 0.0),
-          //           child: Text(
-          //             text3,
-          //             style: const TextStyle(
-          //               fontFamily: 'Poppins',
-          //               fontSize: 18,
-          //               color: Color(0xffffffff),
-          //               fontWeight: FontWeight.w500,
-          //             ),
-          //             textAlign: TextAlign.left,
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //   ),
-          // ),
           Pinned.fromPins(
             Pin(size: 287.0, end: -77.0),
             Pin(size: 15.0, end: 10.0),

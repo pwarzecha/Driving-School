@@ -164,15 +164,7 @@ class _SignInPageState extends State<SignInPage> {
               fit: BoxFit.fill,
             ),
           ),
-          // Pinned.fromPins(
-          //   Pin(size: 63.9, end: -23.5),
-          //   Pin(size: 59.3, middle: 0.4694),
-          //   child: SvgPicture.string(
-          //     _svg_un50wv,
-          //     allowDrawingOutsideViewBox: true,
-          //     fit: BoxFit.fill,
-          //   ),
-          // ),
+
           Pinned.fromPins(
             Pin(start: 17.0, end: 30.0),
             Pin(size: 50.0, middle: 0.1851),
@@ -264,32 +256,6 @@ class _SignInPageState extends State<SignInPage> {
                 ),
 
 
-                //obramówki do pol do wpisywania
-
-                // Pinned.fromPins(
-                //   Pin(start: 37.0, end: 38.0),
-                //   Pin(size: 52.0, middle: 0.3962),
-                //   child: Container(
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(10.0),
-                //       border: Border.all(
-                //           width: 1.0, color: const Color(0xff252427)),
-                //     ),
-                //   ),
-                // ),
-
-
-                // Pinned.fromPins(
-                //   Pin(start: 37.0, end: 38.0),
-                //   Pin(size: 52.0, middle: 0.5849),
-                //   child: Container(
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(10.0),
-                //       border: Border.all(
-                //           width: 1.0, color: const Color(0xff252427)),
-                //     ),
-                //   ),
-                // ),
 
 
 
@@ -398,21 +364,6 @@ class _SignInPageState extends State<SignInPage> {
                 ),
 
 
-                // Pinned.fromPins(
-                //   Pin(size: 300.0, start: 53.0),
-                //   Pin(size: 100.0, middle: 0.3035),
-                //   child: Form(
-                //     key: formKey,
-                //     child: SingleChildScrollView(
-                //       padding: EdgeInsets.all(0),
-                //       child: Column(
-                //         children: [
-                //           EmailFieldWidget(controller: emailController),
-                //         ],
-                //       ),
-                //     ),
-                //   ),
-                // ),
 
               ],
             ),

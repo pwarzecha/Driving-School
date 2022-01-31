@@ -28,22 +28,3 @@ class ExamModePageA extends StatelessWidget {
 
 
 
-
-
-
-/*  @override
-  State<GuestExamModePage> createState() => _GuestExamModePageState();
-}
-
-class _GuestExamModePageState extends State<GuestExamModePage> {
-
-  @override
-  Widget build(BuildContext context) {
-   // QuestionController _controller = Get.put(QuestionController());
-    return Scaffold(
-      backgroundColor: const Color(0xff252427),
-      body: Body(),
-    );
-  }
-}
-*/

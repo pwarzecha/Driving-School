@@ -305,28 +305,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
 
                 ),
-                //
-                // Pinned.fromPins(
-                //   Pin(start: 90.0, end: 10.0),
-                //   Pin(size: 51.0, middle: 0.04),
-                //   child: const Text(
-                //     'Zarejestruj się!',
-                //     style: TextStyle(
-                //       fontFamily: 'Poppins',
-                //       fontSize: 30,
-                //       color: Color(0xff252427),
-                //       fontWeight: FontWeight.w600,
-                //     ),
-                //     textAlign: TextAlign.left,
-                //   ),
-                // ),
 
-               // Pin(size: 123.0, middle: 0.95),
-                //Pin(size: 103.0, middle: 0.2453),
-
-
-
-                //////
                 Pinned.fromPins(
                   Pin(start: 40.0, end: 220.0),
                   Pin(size: 52.0, middle: 0.7453),
@@ -398,36 +377,6 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
 
 
-
-                // Pinned.fromPins(
-                //   Pin(size: 13.5, start: 37.0),
-                //   Pin(size: 23.6, start: 25.0),
-                //   child:
-                //   // Adobe XD layer: 'Icon ionic-ios-arro…' (shape)
-                //   PageLink(
-                //     links: [
-                //       PageLinkInfo(
-                //         transition: LinkTransition.Fade,
-                //         ease: Curves.easeOut,
-                //         duration: 0.3,
-                //         pageBuilder: () => MainHomePage(
-                //           text5: 'Logowanie            \n',
-                //           text4: 'Egzamin         \n',
-                //           text3: 'Nauka    \n',
-                //           text6:
-                //           'Created by M. Gocal & P. Warzecha                                          ',
-                //           text2:
-                //           'APLIKACJA PRZYGOTOWUJACA \nDO EGZAMINU NA PRAWO JAZDY\n',
-                //         ),
-                //       ),
-                //     ],
-                //     child: SvgPicture.string(
-                //       _svg_f7fq5,
-                //       allowDrawingOutsideViewBox: true,
-                //       fit: BoxFit.fill,
-                //     ),
-                //   ),
-                // ),
                 Pinned.fromPins(
                   Pin(size: 300.0, start: 53.0),
                   Pin(size: 20, middle: 0.0935),
